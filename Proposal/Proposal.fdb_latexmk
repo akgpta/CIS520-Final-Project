@@ -1,11 +1,13 @@
 # Fdb version 3
-["pdflatex"] 1551989363 "template.tex" "template.pdf" "template" 1551989364
+["pdflatex"] 1551996683 "Proposal.tex" "Proposal.pdf" "Proposal" 1551996684
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1480098696 1536 06717a2b50de47d4087ac0e6cd759455 ""
+  "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1480098701 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1480098701 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1480098701 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr17.tfm" 1480098701 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsl10.tfm" 1480098701 1508 efecb4a315fe0975509670a272d75ef5 ""
+  "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1480098733 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1480098733 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1480098733 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1480098733 32722 d7379af29a190c3f453aba36302ff5a9 ""
@@ -122,11 +124,11 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "template.aux" 1551989363 1096 23d40b4118a8bc84fb9896bbe630ed55 ""
-  "template.out" 1551989363 252 77f6f5529e47c44b4ef018575088e5e3 ""
-  "template.tex" 1551989362 1709 f5ea081d91ca1e5fbaee39aabb8e63e1 ""
+  "Proposal.aux" 1551996683 2676 35e660aab297a4e4a819dee374af0390 ""
+  "Proposal.out" 1551996683 1280 71ad1d27dc25e1e65d70e59e61c37f6a ""
+  "Proposal.tex" 1551996681 2457 990e737cf5c60af0e7ae6ad40f767e81 ""
   (generated)
-  "template.out"
-  "template.aux"
-  "template.pdf"
-  "template.log"
+  "Proposal.aux"
+  "Proposal.pdf"
+  "Proposal.out"
+  "Proposal.log"
