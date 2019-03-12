@@ -69,22 +69,18 @@ World Health Organization data set will well over 35 years of suicide rates by c
 \section{Related Work}
 \subsection{Related to Models} 
 
-Among papers that we read, a regression model seemed to be the popular choice of method. For example, Pandey and Kaur paper used a Auto-Regressive Distributed Lag (ARDL) model. On the other hand, most of the articles concerning the relationship of suicide rate and other health related trends utilized relatively simple statistical analysis.
+Among the papers that analzyed economic factors, a regression model seemed to be the popular choice of method. For example, Pandey and Kaur paper used a Auto-Regressive Distributed Lag (ARDL) model \footnote{https://crawford.anu.edu.au/acde/asarc/pdf/papers/2009/WP2009/{\_}08.pdf}. 
+
+Most of the articles concerning the relationship of suicide rate and alcohol consumption related trends from a biological perspective utilized relatively simple statistical analysis \footnote{https://www.ncbi.nlm.nih.gov/pubmed/9229027}. Whereas medical research that involved more complex forms of data such as fMRI brain scans utilized algorithms such as Gaussian Naive Bayes \footnote{https://nocklab.fas.harvard.edu/files/nocklab/files/just{\_}2017{\_}machlearn{\_}suicide{\_}emotion{\_}youth.pdf}.
 
 \subsection{Related to Problem} 
 
-During our research, we came across multiple research papers that analyze the correlation between suicide rates and either economical, behavioral, medical, or psychological factors. For example, the Pandey and Kaur paper investigates suicidal trend and economic determinants in an Indian population. Whereas articles published in medical journals explored suicide with alochol/drug consumption, psychotic behavior, brain scans, etc. 
+During our research, we came across multiple research papers that analyze the correlation between suicide rates and either economical, behavioral, medical, or psychological factors. For example, the Pandey and Kaur paper investigates suicidal trend and economic determinants in an Indian population\footnote{https://crawford.anu.edu.au/acde/asarc/pdf/papers/2009/WP2009/{\_}08.pdf}. Whereas articles published in medical journals explored suicide with alochol/drug consumption, psychotic behavior, brain scans, etc \footnote{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2872355/}. 
 
 However, most papers tend to focus on either the economic or behavioral/medical factors. As suicide is likely governed by multiple factors, we seek to investigate this problem through a more holistic approach by simultaneously analyzing both medical, behavioral, and economic factors. Through this application of machine learning, we hope to gain insight on the relative role each factor plays in suicide and about the interaction of these factors. 
 
 Moreover, most papers perform a time series analysis. We provide a different approach by analyzing the data by country. Papers that do focus on certain regions usually provide analysis on one country or a specific region, whereas we will analyze global statistics. 
 
-
-Pandey and Kaur - https://crawford.anu.edu.au/acde/asarc/pdf/papers/2009/WP2009/\_08.pdf
-
-medical article - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2872355/
-
-meta-analysis in medical journal - https://www.ncbi.nlm.nih.gov/pubmed/9229027
 
 \section{Problem Formulation} 
 \subsection{Data Processing Needed} Our data came in a variety of comma-separated formats. A lot of countries were labelled in differing manner and years were often a column and other times a point in a row. We used Excel Pivot Tables to make these more easily parsable and standardized. Later, blanks and other issues with inconsistencies are removed with Python to get an aggregated set of data. Other pre-processing includes removing blanks, reconciling some country names such as (Trinidad \& Tobago vs. Trinidad and Tobago).
