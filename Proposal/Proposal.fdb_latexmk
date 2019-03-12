@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1552427826 "/Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.tex" "/Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.pdf" "Proposal" 1552427831
-  "/Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.aux" 1552427827 3499 f200a577417f979f9daa2ea62fc58155 ""
-  "/Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.tex" 1552427831 13076 5c86c406ee6d440c35cf984a8249e14a ""
+["pdflatex"] 1552427949 "/Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.tex" "/Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.pdf" "Proposal" 1552427950
+  "/Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.aux" 1552427950 3499 dbc01a3ed3d6d7c52c7d00dc907a6c0e ""
+  "/Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.tex" 1552427949 13084 151c677f6e45d974ef51d62b20cafff3 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1480098696 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
@@ -146,13 +146,13 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1495593487 4129592 0e6cfee100d68e6d96b92c0258f2ff73 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "Proposal.aux" 1552427827 3499 f200a577417f979f9daa2ea62fc58155 ""
-  "Proposal.out" 1552427827 1273 4d35e44b64c9462d26a0c8d7cf4b7739 ""
-  "Proposal.tex" 1552427831 13076 5c86c406ee6d440c35cf984a8249e14a ""
+  "Proposal.aux" 1552427950 3499 dbc01a3ed3d6d7c52c7d00dc907a6c0e ""
+  "Proposal.out" 1552427950 1273 4d35e44b64c9462d26a0c8d7cf4b7739 ""
+  "Proposal.tex" 1552427949 13084 151c677f6e45d974ef51d62b20cafff3 ""
   (generated)
-  "/Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.pdf"
-  "Proposal.out"
-  "Proposal.aux"
-  "Proposal.pdf"
-  "/Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.log"
   "Proposal.log"
+  "Proposal.pdf"
+  "Proposal.out"
+  "/Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.log"
+  "Proposal.aux"
+  "/Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.pdf"
