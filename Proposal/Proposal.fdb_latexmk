@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1552361612 "Proposal.tex" "Proposal.pdf" "Proposal" 1552361695
+["pdflatex"] 1552361760 "Proposal.tex" "Proposal.pdf" "Proposal" 1552361761
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1480098696 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
@@ -144,9 +144,9 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "Proposal.aux" 1552361613 2669 3bba881bdd71dd078955f3e17e6995cb ""
-  "Proposal.out" 1552361613 1273 95c07f5e62bb6a5c6220ec259091ed25 ""
-  "Proposal.tex" 1552361694 5867 45805f3539613ac7731420b1c52a0c62 ""
+  "Proposal.aux" 1552361761 2669 3bba881bdd71dd078955f3e17e6995cb ""
+  "Proposal.out" 1552361761 1273 95c07f5e62bb6a5c6220ec259091ed25 ""
+  "Proposal.tex" 1552361759 5855 fdc5faeb624d34d16096c29667a9b00a ""
   (generated)
   "Proposal.out"
   "Proposal.pdf"
