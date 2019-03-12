@@ -1,9 +1,9 @@
-PWD /Users/Monal/Desktop/Code/CIS520/CIS520-Final-Project/Proposal
+PWD /Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal
 INPUT /usr/local/texlive/2017/texmf.cnf
 INPUT /usr/local/texlive/2017/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT Proposal.tex
-OUTPUT Proposal.log
+INPUT /Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.tex
+OUTPUT /Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.log
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/base/size10.clo
@@ -180,9 +180,9 @@ INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/titlesec/titlesec.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/titlesec/titlesec.sty
-INPUT Proposal.aux
-INPUT Proposal.aux
-OUTPUT Proposal.aux
+INPUT /Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.aux
+INPUT /Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.aux
+OUTPUT /Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.aux
 INPUT /usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
@@ -195,14 +195,14 @@ INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 INPUT /usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-INPUT Proposal.out
-INPUT Proposal.out
-INPUT Proposal.out
-INPUT Proposal.out
-OUTPUT Proposal.pdf
-INPUT ./Proposal.out
-INPUT ./Proposal.out
-OUTPUT Proposal.out
+INPUT /Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.out
+INPUT /Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.out
+INPUT /Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.out
+INPUT /Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.out
+OUTPUT /Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.pdf
+INPUT /Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.out
+INPUT /Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.out
+OUTPUT /Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.out
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
@@ -233,12 +233,12 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam1
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsl10.tfm
-INPUT Proposal.aux
-INPUT ./Proposal.out
-INPUT ./Proposal.out
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.aux
+INPUT /Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.out
+INPUT /Users/aashish/Developer/School/CIS 519/CIS520-Final-Project/Proposal/Proposal.out
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
