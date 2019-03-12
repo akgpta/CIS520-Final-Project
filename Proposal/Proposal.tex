@@ -60,8 +60,9 @@
 \begin{multicols}{2}
 
 \section{Introduction}
-\subsection{Problem Motivation} \TODO
-\subsection{Data Set and Source} \TODO
+\subsection{Problem Motivation} Unfortunately, it is a sad reality that many individuals each year commit suicide. We in the U.S. are slowly being aware of this issue, but we wanted to understand suicide rates internationally. Especially, we wanted to look at these rates as they related to common features of each country, such as GDP, unemployment, and alcohol consumption. At a high-level we wanted to draw out any meaningful relationship between these macro features and suicide rates.
+\subsection{Data Set and Source} Our project grew from an intriguing 
+World Health Organization data set will well over 35 years of suicide rates by country broken up by demographics.  \footnote{https://www.kaggle.com/szamil/who-suicide-statistics}. In an effort to extend existing analysis though, we actually sources global data from a variety of sources. This included a FiveThirtyEight data set on alcohol consumption \footnote{https://www.kaggle.com/fivethirtyeight/fivethirtyeight-alcohol-consumption-dataset}. We also incorporates a World Bank Data Set on Youth Unemployment \footnote{https://www.kaggle.com/sovannt/world-bank-youth-unemployment} and another from the World Bank on population, fertility, and life expectancy \footnote{https://www.kaggle.com/gemartin/world-bank-data-1960-to-2016}.
 \subsection{Summary Statistics} \TODO (nicely formatted table)
 
 
@@ -70,14 +71,14 @@
 \subsection{Related to Problem} \TODO
 
 \section{Problem Formulation} 
-\subsection{Data Processing Needed} \TODO
-\subsection{Inputs, Outputs, Tests} \TODO
-\subsection{Performance Measures} \TODO
+\subsection{Data Processing Needed} Our data came in a variety of comma-separated formats. A lot of countries were labelled in differing manner and years were often a column and other times a point in a row. We used Excel Pivot Tables to make these more easily parsable and standardized. Later, blanks and other issues with inconsistencies are removed with Python to get an aggregated set of data. Other pre-processing includes removing blanks, reconciling some country names such as (Trinidad \& Tobago vs. Trinidad and Tobago).
+\subsection{Inputs, Outputs} Inputs are a variety of real-valued data points tied to the country. They are described above, but it remains to see which we might have to throw out due to excessive blanks. Most are also measured for a specific year, however some are just duplicated across all years (e.g. Alcohol Consumption). Outputs are a model, which given a countries characteristic features, can predict suicide rates. We have suicide rates by gender (as well as age demographics), so we may also seek a model which predicts a rate for male suicides and a rate for female suicides.  \TODO
+\subsection{Performance Measures} Given the regression nature of this problem, we believe a squared loss model is appropriate. However, during the course of our work, we may seek alternate loss models such as a proxy for $TPR$ and $TNR$ through some acceptable error window.\TODO
 
 
 \section{Solution Methods}
-\subsection{Algorithms Planned For Use} \TODO
-\subsection{Justification} \TODO
+\subsection{Algorithms Planned For Use} We will start with least squares regression in unregularized, $L_1$ regularized, and $L_2$ regularized forms. We are not certain whether any of our features will be overly correlated so the unregularized least squares regression may fail. We also seek to explore Nearest Neighbor methods, but not with vanilla Euclidean distance, but with feature weighted scaling on the distances. Lastly, we will consider using decision stubs as features and feeding the transformed input space into another learning model, perhaps Neural Nets.
+\subsection{Justification} As a regression problem, squared loss makes sense as a first choice. Furthermore, we want to limit ourselves to models which actually inform us about the relative importance of features. As such, vanilla nearest neighbors is not informative in the context of our problem. However, determining similarity in which features best informs Nearest Neighbors makes sense given our problem motivation.
 
 \section{Plan of Work}
 \subsection{Team Member Tasks} \TODO
