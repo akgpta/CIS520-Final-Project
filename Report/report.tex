@@ -1,0 +1,192 @@
+
+\documentclass{article}
+\usepackage[letterpaper,top=0.5in,bottom=0.5in,left=.5in,right=.5in,includeheadfoot]{geometry}
+\usepackage{amssymb,amsmath}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{tabu}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{soul}
+\usepackage{changepage}
+\usepackage{endnotes}
+% \usepackage{dblfnote}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue}
+
+\renewcommand{\baselinestretch}{1.3}
+\pagestyle{fancy}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{0pt}
+
+\fancypagestyle{firstpage}{
+  \fancyhead{}
+  \fancyfoot{}
+}
+
+\usepackage{titlesec}
+
+\titlespacing\title{0pt}{0pt plus 4pt minus 2pt}{-5pt plus 2pt minus 2pt}
+\titlespacing\section{0pt}{-8pt plus 4pt minus 2pt}{-6pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{0pt plus 4pt minus 2pt}{-6pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{0pt plus 4pt minus 2pt}{-5pt plus 2pt minus 2pt}
+
+
+
+% Modify here to change homework number, name, and PennKey as necessary.
+\newcommand{\HomeworkNo}{1}
+\newcommand{\MyName}{Amit Gupta, Monal Garg, Aashish Jain, Moksh Jawa}
+\newcommand{\MyPennKey}{akgupta@seas, mgarg@sas, aashj99@seas, moksh@seas}
+\newcommand{\Class}{CIS520}
+
+\newcommand{\TODO}{\textcolor{red}{\textbf{\hl{TODO}}}}
+
+\newcommand{\PrintFirstHeader}{
+  \Large{\Class} - \large{Group 10} \hfill {\Large{\MyName}}
+  \\
+   \vspace{5pt} \hfill \normalsize{\MyPennKey}
+  \\
+  {\LARGE{\textbf{Project Proposal}}}  \hfill {\Large{March, 2019}}
+
+  \rule{\textwidth}{0.4pt}}
+
+\begin{document}
+\thispagestyle{firstpage}
+\PrintFirstHeader{}
+
+\begin{multicols}{2}
+
+\section{Introduction}
+\subsection{Problem Motivation} Unfortunately, it is a sad reality that many individuals each year commit suicide. We in the U.S. are slowly being aware of this issue, but we wanted to understand suicide rates internationally. Especially, we wanted to look at these rates as they related to common features of each country, such as GDP, unemployment, and alcohol consumption. At a high-level we wanted to draw out any meaningful relationship between these macro features and suicide rates.
+\subsection{Data Set and Source} Our project grew from an intriguing 
+World Health Organization data set will well over 35 years of suicide rates by country broken up by demographics.  \endnote{https://www.kaggle.com/szamil/who-suicide-statistics}. In an effort to extend existing analysis though, we actually sources global data from a variety of sources. This included a FiveThirtyEight data set on alcohol consumption \endnote{https://www.kaggle.com/fivethirtyeight/fivethirtyeight-alcohol-consumption-dataset}. We also incorporates a World Bank Data Set on Youth Unemployment \endnote{https://www.kaggle.com/sovannt/world-bank-youth-unemployment} and another from the World Bank on population, fertility, and life expectancy \endnote{https://www.kaggle.com/gemartin/world-bank-data-1960-to-2016}.
+\subsection{Summary Statistics} 
+We've provided summary statistics for 4 of the datasets we will be using in our project shown in Tables \hyperref[summary-statistic-table-alcohol]{0}, \ref{summary-statistic-table-youth-unemployment}, \ref{summary-statistic-table-fertility}, \ref{summary-statistic-table-life}, some of which are located in the appendix.
+
+\begin{adjustwidth}{8px}{}
+\begin{tabular}{|l|l|}
+\hline
+Statistic          & Average liters/person/year \\ \hline
+Min                & 0                          \\ \hline
+Max                & 14.4                       \\ \hline
+Mean               & 4.71                       \\ \hline
+Median             & 4.2                        \\ \hline
+Standard Deviation & 3.77                       \\ \hline
+\multicolumn{2}{c}{Table 0: Alcohol Consumption by Country} 
+\label{summary-statistic-table-alcohol}
+\end{tabular}
+\end{adjustwidth}
+
+
+\section{Related Work}
+\subsection{Related to Models} 
+
+Among the papers that analzyed economic factors, a regression model seemed to be the popular choice of method. For example, Pandey and Kaur paper used a Auto-Regressive Distributed Lag (ARDL) model \endnote{https://crawford.anu.edu.au/acde/asarc/pdf/papers/2009/WP2009/{\_}08.pdf}. 
+
+Most of the articles concerning the relationship of suicide rate and alcohol consumption related trends from a biological perspective utilized relatively simple statistical analysis \endnote{https://www.ncbi.nlm.nih.gov/pubmed/9229027}. Whereas medical research that involved more complex forms of data such as fMRI brain scans utilized algorithms such as Gaussian Naive Bayes \endnote{https://nocklab.fas.harvard.edu/files/nocklab/files/just{\_}2017{\_}machlearn{\_}suicide{\_}emotion{\_}youth.pdf}.
+
+\subsection{Related to Problem} 
+
+During our research, we came across multiple research papers that analyze the correlation between suicide rates and either economical, behavioral, medical, or psychological factors. For example, the Pandey and Kaur paper investigates suicidal trend and economic determinants in an Indian population\endnote{https://crawford.anu.edu.au/acde/asarc/pdf/papers/2009/WP2009/{\_}08.pdf}. Whereas articles published in medical journals explored suicide with alochol/drug consumption, psychotic behavior, brain scans, etc \endnote{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2872355/}. 
+
+However, most papers tend to focus on either the economic or behavioral/medical factors. As suicide is likely governed by multiple factors, we seek to investigate this problem through a more holistic approach by simultaneously analyzing both medical, behavioral, and economic factors. Through this application of machine learning, we hope to gain insight on the relative role each factor plays in suicide and about the interaction of these factors. 
+
+Moreover, most papers perform a time series analysis. We provide a different approach by analyzing the data by country. Papers that do focus on certain regions usually provide analysis on one country or a specific region, whereas we will analyze global statistics. 
+
+
+\section{Problem Formulation} 
+\subsection{Data Processing Needed} Our data came in a variety of comma-separated formats. A lot of countries were labelled in differing manner and years were often a column and other times a point in a row. We used Excel Pivot Tables to make these more easily parsable and standardized. Later, blanks and other issues with inconsistencies are removed with Python to get an aggregated set of data. Other pre-processing includes removing blanks, reconciling some country names such as (Trinidad \& Tobago vs. Trinidad and Tobago).
+\subsection{Inputs, Outputs} Inputs are a variety of real-valued data points tied to the country. They are described above, but it remains to see which we might have to throw out due to excessive blanks. Most are also measured for a specific year, however some are just duplicated across all years (e.g. Alcohol Consumption). Outputs are a model, which given a countries characteristic features, can predict suicide rates. We have suicide rates by gender (as well as age demographics), so we may also seek a model which predicts a rate for male suicides and a rate for female suicides.
+\subsection{Performance Measures} Given the regression nature of this problem, we believe a squared loss model is appropriate. However, during the course of our work, we may seek alternate loss models such as a proxy for $TPR$ and $TNR$ through some acceptable error window.
+
+
+\section{Solution Methods}
+\subsection{Algorithms Planned For Use} We will start with least squares regression in unregularized, $L_1$ regularized, and $L_2$ regularized forms. We are not certain whether any of our features will be overly correlated so the unregularized least squares regression may fail. We also seek to explore Nearest Neighbor methods, but not with vanilla Euclidean distance, but with feature weighted scaling on the distances. Lastly, we will consider using decision stubs as features and feeding the transformed input space into another learning model, perhaps Neural Nets.
+\subsection{Justification} As a regression problem, squared loss makes sense as a first choice. Furthermore, we want to limit ourselves to models which actually inform us about the relative importance of features. As such, vanilla nearest neighbors is not informative in the context of our problem. However, determining similarity in which features best informs Nearest Neighbors makes sense given our problem motivation.
+
+\section{Plan of Work}
+\subsection{Team Member Tasks} 
+
+Monal: Past Work, Solution Approach, Machine Learning Algorithms, Visualizations, Report
+
+Amit: Problem Formulation, Algorithms Plan for Use, Machine Learning Algorithms, Visualizations, Report
+
+Ash: Data Cleaning, Data Stitching, Machine Learning Algorithms, Visualizations, Report
+
+Moksh: Data Cleaning, Data Stitching, Machine Learning Algorithms, Visualization, Report
+
+\subsection{Pre-Milestone Meeting Goals} 
+
+Our goal before our milestone meeting is have the data completed clean and visualized. Additionally, we plan to have k-Nearest Neighbors and Least Squares Regression implemented, visualized, and results recorded. Note that our k-Nearest Neighbor implementation will have weighted scaling based on features rather than Euclidean distance.
+
+\subsection{Timelines}
+
+After our milestone meeting, we will have exactly 3 weeks. The first week will involve implementing our last approach of decision stubs as features and feeding them into neural nets. The second week will involve finetuning and evaluating our models. The last week will be for writing up the report.
+
+\section{Acknowledgements} N/A
+
+\end{multicols}
+
+\pagebreak
+
+\section{References} \theendnotes
+
+\section{Appendix} 
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+          &  \multicolumn{5}{c|}{Youth Unemployed} \\ \hline
+Statistic          &  \%  2010 &  \% 2011 &  \% 2012 &  \%  2013 & \% 2014 \\ \hline
+Min                & 0.6999                    & 0.6999                    & 0.5                       & 0.6999                    & 0.6999                    \\ \hline
+Max                & 57.2                      & 57.1                      & 61.7                      & 58                        & 57.9                      \\ \hline
+Mean               & 17.89                     & 17.9                      & 18.15                     & 18.1                      & 17.94                     \\ \hline
+Median             & 14.9                      & 14.52                     & 14.4                      & 14.1                      & 14.12                     \\ \hline
+Standard Deviation & 10.54                     & 10.88                     & 11.43                     & 11.67                     & 11.55                     \\ \hline
+\end{tabular}
+\caption{Youth Unemployment by Country}
+\label{summary-statistic-table-youth-unemployment}
+\end{table}
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+          &  \multicolumn{5}{c|}{Fertility Rates} \\ \hline
+Statistic          &  \%  2010 &  \% 2011 &  \% 2012 &  \%  2013 & \% 2014 \\ \hline
+Min                & 1.06                   & 1.11                   & 1.16                   & 1.13                   & 1.21                   \\ \hline
+Max                & 7.49                   & 7.46                   & 7.42                   & 7.38                   & 7.34                   \\ \hline
+Mean               & 2.91                   & 2.88                   & 2.84                   & 2.81                   & 2.79                   \\ \hline
+Median             & 2.41                   & 2.37                   & 2.34                   & 2.34                   & 2.33                   \\ \hline
+Standard Deviation & 1.45                   & 1.42                   & 1.39                   & 1.37                   & 1.34                   \\ \hline
+\end{tabular}
+\caption{Fertility Rates by Country}
+\label{summary-statistic-table-fertility}
+\end{table}
+\begin{multicols}{2}
+
+
+\end{multicols}
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+          &  \multicolumn{5}{c|}{Life Expectancy} \\ \hline
+Statistic          &  \%  2010 &  \% 2011 &  \% 2012 &  \%  2013 & \% 2014 \\ \hline
+Min                & 47.56                  & 48.284                 & 49.041                 & 49.825                 & 50.621                 \\ \hline
+Max                & 82.9780488             & 83.4219512             & 85.4170732             & 83.8317073             & 83.9804878             \\ \hline
+Median             & 72.2783848             & 72.4719847             & 72.657                 & 72.786                 & 72.9707317             \\ \hline
+Standard Deviation & 8.34929356             & 8.19102272             & 8.04819537             & 7.89104622             & 7.80484223             \\ \hline
+\end{tabular}
+\caption{Life Expectancy by Country}
+\label{summary-statistic-table-life}
+\end{table}
+
+
+
+
+
+\end{document}
