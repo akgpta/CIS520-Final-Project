@@ -12,6 +12,7 @@
 \usepackage{color}
 \usepackage{soul}
 \usepackage{changepage}
+\usepackage{endnotes}
 % \usepackage{dblfnote}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,urlcolor=blue}
@@ -62,20 +63,35 @@
 \section{Introduction}
 \subsection{Problem Motivation} Unfortunately, it is a sad reality that many individuals each year commit suicide. We in the U.S. are slowly being aware of this issue, but we wanted to understand suicide rates internationally. Especially, we wanted to look at these rates as they related to common features of each country, such as GDP, unemployment, and alcohol consumption. At a high-level we wanted to draw out any meaningful relationship between these macro features and suicide rates.
 \subsection{Data Set and Source} Our project grew from an intriguing 
-World Health Organization data set will well over 35 years of suicide rates by country broken up by demographics.  \footnote{https://www.kaggle.com/szamil/who-suicide-statistics}. In an effort to extend existing analysis though, we actually sources global data from a variety of sources. This included a FiveThirtyEight data set on alcohol consumption \footnote{https://www.kaggle.com/fivethirtyeight/fivethirtyeight-alcohol-consumption-dataset}. We also incorporates a World Bank Data Set on Youth Unemployment \footnote{https://www.kaggle.com/sovannt/world-bank-youth-unemployment} and another from the World Bank on population, fertility, and life expectancy \footnote{https://www.kaggle.com/gemartin/world-bank-data-1960-to-2016}.
-\subsection{Summary Statistics} \TODO (nicely formatted table)
+World Health Organization data set will well over 35 years of suicide rates by country broken up by demographics.  \endnote{https://www.kaggle.com/szamil/who-suicide-statistics}. In an effort to extend existing analysis though, we actually sources global data from a variety of sources. This included a FiveThirtyEight data set on alcohol consumption \endnote{https://www.kaggle.com/fivethirtyeight/fivethirtyeight-alcohol-consumption-dataset}. We also incorporates a World Bank Data Set on Youth Unemployment \endnote{https://www.kaggle.com/sovannt/world-bank-youth-unemployment} and another from the World Bank on population, fertility, and life expectancy \endnote{https://www.kaggle.com/gemartin/world-bank-data-1960-to-2016}.
+\subsection{Summary Statistics} 
+We've provided summary statistics for 4 of the datasets we will be using in our project shown in Tables \hyperref[summary-statistic-table-alcohol]{0}, \ref{summary-statistic-table-youth-unemployment}, \ref{summary-statistic-table-fertility}, \ref{summary-statistic-table-life}, some of which are located in the appendix.
+
+\begin{adjustwidth}{8px}{}
+\begin{tabular}{|l|l|}
+\hline
+Statistic          & Average liters/person/year \\ \hline
+Min                & 0                          \\ \hline
+Max                & 14.4                       \\ \hline
+Mean               & 4.71                       \\ \hline
+Median             & 4.2                        \\ \hline
+Standard Deviation & 3.77                       \\ \hline
+\multicolumn{2}{c}{Table 0: Alcohol Consumption by Country} 
+\label{summary-statistic-table-alcohol}
+\end{tabular}
+\end{adjustwidth}
 
 
 \section{Related Work}
 \subsection{Related to Models} 
 
-Among the papers that analzyed economic factors, a regression model seemed to be the popular choice of method. For example, Pandey and Kaur paper used a Auto-Regressive Distributed Lag (ARDL) model \footnote{https://crawford.anu.edu.au/acde/asarc/pdf/papers/2009/WP2009/{\_}08.pdf}. 
+Among the papers that analzyed economic factors, a regression model seemed to be the popular choice of method. For example, Pandey and Kaur paper used a Auto-Regressive Distributed Lag (ARDL) model \endnote{https://crawford.anu.edu.au/acde/asarc/pdf/papers/2009/WP2009/{\_}08.pdf}. 
 
-Most of the articles concerning the relationship of suicide rate and alcohol consumption related trends from a biological perspective utilized relatively simple statistical analysis \footnote{https://www.ncbi.nlm.nih.gov/pubmed/9229027}. Whereas medical research that involved more complex forms of data such as fMRI brain scans utilized algorithms such as Gaussian Naive Bayes \footnote{https://nocklab.fas.harvard.edu/files/nocklab/files/just{\_}2017{\_}machlearn{\_}suicide{\_}emotion{\_}youth.pdf}.
+Most of the articles concerning the relationship of suicide rate and alcohol consumption related trends from a biological perspective utilized relatively simple statistical analysis \endnote{https://www.ncbi.nlm.nih.gov/pubmed/9229027}. Whereas medical research that involved more complex forms of data such as fMRI brain scans utilized algorithms such as Gaussian Naive Bayes \endnote{https://nocklab.fas.harvard.edu/files/nocklab/files/just{\_}2017{\_}machlearn{\_}suicide{\_}emotion{\_}youth.pdf}.
 
 \subsection{Related to Problem} 
 
-During our research, we came across multiple research papers that analyze the correlation between suicide rates and either economical, behavioral, medical, or psychological factors. For example, the Pandey and Kaur paper investigates suicidal trend and economic determinants in an Indian population\footnote{https://crawford.anu.edu.au/acde/asarc/pdf/papers/2009/WP2009/{\_}08.pdf}. Whereas articles published in medical journals explored suicide with alochol/drug consumption, psychotic behavior, brain scans, etc \footnote{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2872355/}. 
+During our research, we came across multiple research papers that analyze the correlation between suicide rates and either economical, behavioral, medical, or psychological factors. For example, the Pandey and Kaur paper investigates suicidal trend and economic determinants in an Indian population\endnote{https://crawford.anu.edu.au/acde/asarc/pdf/papers/2009/WP2009/{\_}08.pdf}. Whereas articles published in medical journals explored suicide with alochol/drug consumption, psychotic behavior, brain scans, etc \endnote{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2872355/}. 
 
 However, most papers tend to focus on either the economic or behavioral/medical factors. As suicide is likely governed by multiple factors, we seek to investigate this problem through a more holistic approach by simultaneously analyzing both medical, behavioral, and economic factors. Through this application of machine learning, we hope to gain insight on the relative role each factor plays in suicide and about the interaction of these factors. 
 
@@ -117,9 +133,57 @@ After our milestone meeting, we will have exactly 3 weeks. The first week will i
 
 \pagebreak
 
-\section{References} In footnotes
+\section{References} \theendnotes
 
-\section{Appendix} None yet.
+\section{Appendix} 
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+          &  \multicolumn{5}{c|}{Youth Unemployed} \\ \hline
+Statistic          &  \%  2010 &  \% 2011 &  \% 2012 &  \%  2013 & \% 2014 \\ \hline
+Min                & 0.6999                    & 0.6999                    & 0.5                       & 0.6999                    & 0.6999                    \\ \hline
+Max                & 57.2                      & 57.1                      & 61.7                      & 58                        & 57.9                      \\ \hline
+Mean               & 17.89                     & 17.9                      & 18.15                     & 18.1                      & 17.94                     \\ \hline
+Median             & 14.9                      & 14.52                     & 14.4                      & 14.1                      & 14.12                     \\ \hline
+Standard Deviation & 10.54                     & 10.88                     & 11.43                     & 11.67                     & 11.55                     \\ \hline
+\end{tabular}
+\caption{Youth Unemployment by Country}
+\label{summary-statistic-table-youth-unemployment}
+\end{table}
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+          &  \multicolumn{5}{c|}{Fertility Rates} \\ \hline
+Statistic          &  \%  2010 &  \% 2011 &  \% 2012 &  \%  2013 & \% 2014 \\ \hline
+Min                & 1.06                   & 1.11                   & 1.16                   & 1.13                   & 1.21                   \\ \hline
+Max                & 7.49                   & 7.46                   & 7.42                   & 7.38                   & 7.34                   \\ \hline
+Mean               & 2.91                   & 2.88                   & 2.84                   & 2.81                   & 2.79                   \\ \hline
+Median             & 2.41                   & 2.37                   & 2.34                   & 2.34                   & 2.33                   \\ \hline
+Standard Deviation & 1.45                   & 1.42                   & 1.39                   & 1.37                   & 1.34                   \\ \hline
+\end{tabular}
+\caption{Fertility Rates by Country}
+\label{summary-statistic-table-fertility}
+\end{table}
+\begin{multicols}{2}
+
+
+\end{multicols}
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+          &  \multicolumn{5}{c|}{Life Expectancy} \\ \hline
+Statistic          &  \%  2010 &  \% 2011 &  \% 2012 &  \%  2013 & \% 2014 \\ \hline
+Min                & 47.56                  & 48.284                 & 49.041                 & 49.825                 & 50.621                 \\ \hline
+Max                & 82.9780488             & 83.4219512             & 85.4170732             & 83.8317073             & 83.9804878             \\ \hline
+Median             & 72.2783848             & 72.4719847             & 72.657                 & 72.786                 & 72.9707317             \\ \hline
+Standard Deviation & 8.34929356             & 8.19102272             & 8.04819537             & 7.89104622             & 7.80484223             \\ \hline
+\end{tabular}
+\caption{Life Expectancy by Country}
+\label{summary-statistic-table-life}
+\end{table}
 
 
 
