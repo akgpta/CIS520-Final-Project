@@ -10,6 +10,20 @@ def main():
     youth_unemployment = pd.DataFrame.from_csv("../../Data/Manually-Cleaned/youth_unemployment.csv", index_col=None)
 
     countries = suicide_rates['Country'];
+    fertility_rates_countries = fertility_rates['Country']
+    drinks_countries = drinks['Country']
+    life_expectancy_countries = life_expectancy['Country']
+    country_population_countries = country_population['Country']
+    youth_unemployment_countries = youth_unemployment['Country']
+
+    suicide_rates = merge_countries(suicide_rates, countries=fertility_rates_countries)
+    suicide_rates = merge_countries(suicide_rates, countries=drinks_countries)
+    suicide_rates = merge_countries(suicide_rates, countries=life_expectancy_countries)
+    suicide_rates = merge_countries(suicide_rates, countries=country_population_countries)
+    suicide_rates = merge_countries(suicide_rates, countries=youth_unemployment_countries)
+
+    countries = suicide_rates['Country'];
+
     suicide_rates = clean_dataframe(suicide_rates, countries=countries)
     fertility_rates = clean_dataframe(fertility_rates, countries=countries)
     drinks = clean_dataframe(drinks,  countries=countries)
