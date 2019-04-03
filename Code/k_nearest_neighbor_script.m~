@@ -2,10 +2,10 @@ get_data
 
 d = size(X_10, 2);
 
-A = [1, 2, 5, 10]; 
+A = [1, 2]; 
 alphas = cartesian(A, d); 
 
-k_values = [1,2,5,10]; 
+k_values = [1, 2, 5]; 
 
 err_cv = zeros(size(alphas,1), size(k_values,2));
 
@@ -24,19 +24,5 @@ for a = 1:size(alphas, 1)
 end
 err_cv = err_cv./length(x_folds);
 
-foo_axis = 1:size(alphas);
-foo_axis = foo_axis.';
-foo_axis = repmat(foo_axis, 1, size(k_values,2));
-foo_axis = foo_axis(:);
-
-bar_axis = repmat(k_values,size(alphas,1),1);
-bar_axis = bar_axis(:);
-
-z_values = err_cv(:);
-
-scatter3(foo_axis, bar_axis, z_values);
-xlabel("alpha index");
-ylabel("k value");
-zlabel("average cv error");
-title("stuff");
+scatter3(1:size(alphas), k_values, err_cv);
 %TODO: holdout period

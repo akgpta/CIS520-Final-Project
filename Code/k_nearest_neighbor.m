@@ -15,9 +15,9 @@ function [Y_output] = k_nearest_neighbor(X_train, Y_train, alpha, k, X_test);
 Y_output = zeros(m, 1);
 
 for i = 1: m
-    dist_to_all_datapoints = sum((((X_train - X_test(i, :)).^2) .* alpha'), 2);
+    dist_to_all_datapoints = sum((((X_train - X_test(i, :)).^2) .* alpha), 2);
     
-    [~, k_nearest_idx] = mink(dist_to_all_datapoints, k); 
+    [~, k_nearest_idx] = mink(dist_to_all_datapoints, k);
     
     sum_y = 0;
 
