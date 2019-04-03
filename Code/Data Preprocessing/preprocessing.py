@@ -31,13 +31,13 @@ def main():
     country_population = clean_dataframe(country_population, countries=countries)
     youth_unemployment = clean_dataframe(youth_unemployment, countries=countries)
 
-
-    merge1 = pd.merge(fertility_rates, drinks, on="Country");
+    merge0 = pd.merge(suicide_rates, fertility_rates, on="Country")
+    merge1 = pd.merge(merge0, drinks, on="Country");
     merge2 = pd.merge(merge1, life_expectancy, on="Country");
     merge3 = pd.merge(merge2, country_population, on="Country");
     merge4 = pd.merge(merge3, youth_unemployment, on="Country");
 
-    merge4.to_csv("../../Data/Cleaned/X.csv")
+    merge4.to_csv("../../Data/Cleaned/all.csv")
 
 
     create_Y(suicide_rates)
