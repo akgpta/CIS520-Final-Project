@@ -1,0 +1,26 @@
+% k_nearest_neighbor.m
+
+function [Y_output] = k_nearest_neighbor(X_train, Y_train, alpha, k, X_test);
+
+% X_train is m x d
+% Y_train is m x 1
+
+% alpha is d x 1
+% k = # of nearest neighbor
+
+% X_test is m' x d
+% Y_output is m' x 1
+
+dist_to_all_datapoints = sum((((X_train - X_test).^2) .* alpha'), 2); 
+
+[~, k_nearest_idx] = mink(dist_to_all_datapoints, k); 
+
+sum_y = 0;
+
+for i = 1:k
+    sum_y = sum_y + Y_train(k_nearest_idx(i)); 
+end
+
+avg_y = 
+
+end
