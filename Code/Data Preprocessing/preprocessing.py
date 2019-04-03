@@ -9,15 +9,21 @@ def main():
     country_population = pd.DataFrame.from_csv("../../Data/Manually-Cleaned/country_population.csv", index_col=None)
     youth_unemployment = pd.DataFrame.from_csv("../../Data/Manually-Cleaned/youth_unemployment.csv", index_col=None)
 
-    countries = suicide_rates['Country'].tolist();
-    suicide_rates = clean_dataframe(suicide_rates)
+    countries = suicide_rates['Country'];
+    suicide_rates = clean_dataframe(suicide_rates, countries=countries)
     fertility_rates = clean_dataframe(fertility_rates, countries=countries)
-    drinks = clean_dataframe(drinks, country_column='country', countries=countries)
+    drinks = clean_dataframe(drinks,  countries=countries)
     life_expectancy = clean_dataframe(life_expectancy, countries=countries)
     country_population = clean_dataframe(country_population, countries=countries)
     youth_unemployment = clean_dataframe(youth_unemployment, countries=countries)
-    print(fertility_rates)
 
+
+    merge1 = pd.merge(fertility_rates, drinks, on="Country");
+    merge2 = pd.merge(merge1, life_expectancy, on="Country");
+    merge3 = pd.merge(merge2, country_population, on="Country");
+    merge4 = pd.merge(merge3, youth_unemployment, on="Country");
+
+    merge4.to_csv("../../Data/Cleaned/X.csv")
 
 
     create_Y(suicide_rates)
@@ -28,7 +34,7 @@ def clean_country_name(country_name):
     return country_name
 
 
-def clean_dataframe(dataframe, country_column='Country', countries=[]):
+def clean_dataframe(dataframe, countries, country_column='Country'):
     dataframe[country_column] = dataframe[country_column].astype(str);
     dataframe[country_column] = dataframe[country_column].apply(clean_country_name)
     dataframe.sort_values(by=[country_column])
