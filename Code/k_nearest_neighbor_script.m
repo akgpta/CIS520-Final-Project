@@ -2,7 +2,7 @@ get_data
 
 d = size(X_10, 2);
 
-A = [1, 2, 5, 10]; 
+A = [1, 2, 5]; 
 alphas = cartesian(A, d); 
 
 k_values = [1,2,5,10]; 

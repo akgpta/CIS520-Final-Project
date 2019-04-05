@@ -31,11 +31,13 @@ X_10 = X_data{1};
 X_11 = X_data{2};
 X_12 = X_data{3};
 X_13 = X_data{4};
+X_14 = X_data{5};
 
 Y_10 = Y_data{1};
 Y_11 = Y_data{2};
 Y_12 = Y_data{3};
 Y_13 = Y_data{4};
+Y_14 = Y_data{5};
 
 x_fold_1 = [X_11; X_12; X_13];
 y_fold_1 = [Y_11; Y_12; Y_13];
@@ -48,6 +50,9 @@ y_fold_3 = [Y_10; Y_11; Y_13];
 
 x_fold_4 = [X_10; X_11; X_12];
 y_fold_4 = [Y_10; Y_11; Y_12];
+
+X_train = [X_10; X_11; X_12; X_13]; 
+Y_train = [Y_10; Y_11; Y_12; Y_13]; 
 
 x_folds = {x_fold_1, x_fold_2, x_fold_3, x_fold_4};
 x_tests = {X_10, X_11, X_12, X_13};
