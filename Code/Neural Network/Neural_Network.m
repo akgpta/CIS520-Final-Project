@@ -4,7 +4,7 @@ num_features = 8;
 
 activation_function_string = "relu";
 num_iters = 20000;
-learning_rate = 0.1;
+learning_rate = 0.001;
 
 if (strcmp(activation_function_string,"relu"))
     activation_function = @relu;
@@ -43,7 +43,7 @@ for fold = 1:4
     
     disp("Training neural network of size: " + num_hidden);
     
-    [W1, b1, W2, b2] = TrainNetwork(X_train_cv, y_train_cv, W1, b1, W2, b2, activation_function, activation_function_derivative, num_iters, learning_rate);
+    [W1, b1, W2, b2] = neural_network_2(X_train_cv, y_train_cv, learning_rate, num_iters, W1, W2, b1, b2, 'relu');
     
     y_hat_test = predict(X_test_cv, W1, W2, b1, b2, activation_function);
     
