@@ -10,12 +10,7 @@ for i = 1:length(x_folds)
     err_cv(i) = squared_error(Y_pred', y_tests{i});
 end
 
-[w, b] = LinearLeastSquareRegression(X_train, Y_train, 0);
-Y_pred_train = w' * X_train' + b; 
-y_train_err = squared_error(Y_pred_train', Y_train);
-
-Y_pred_test = w' * X_test' + b; 
-y_test_err = squared_error(Y_pred_test', Y_test);
+[w, b] = LinearLeastSquareRegression(x_folds{i}, y_folds{i}, 0);
        
 % Linear Regression Regularized
 lambda_values = [0.001, 0.01, 0.1, 1, 10, 100, 500, 1000];
