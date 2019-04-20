@@ -2,7 +2,7 @@ get_data
 
 d = size(X_10, 2);
 
-k_values = [1,2,5,10]; 
+k_values = [1,2,3,5,10]; 
 q_values = [1,2,3]; 
 
 err_nn = zeros(3, size(k_values,2)); 
@@ -62,7 +62,7 @@ hold on;
 plot(k_values, err_nn(2, :),'-')
 hold on;
 plot(k_values, err_nn(3, :),'-')
-title('Using Cross Validation to find Best Value of K')
+title('k-Nearest Neighbors')
 xlabel('Value of K') 
 ylabel('Square Error') 
 legend({'Cross Validation Error', 'Training Error','Test Error'})
@@ -73,7 +73,7 @@ hold on;
 plot(k_values, min(err_min_train.'),'-')
 hold on;
 plot(k_values, min(err_min_test.'),'-')
-title('Using Cross Validation to find Best Value of K Using Minkowski distance formula')
+title('k-Nearest Neighbors Using Minkowski Distance Formula')
 xlabel('Value of K') 
 ylabel('Square Error') 
 legend({'Cross Validation Error', 'Training Error','Test Error'})

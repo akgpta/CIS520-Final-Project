@@ -4,6 +4,7 @@ num_features = 8;
 
 activation_function_string = "logistic";
 num_iters = 5000;
+
 learning_rate = 0.001;
 
 if (strcmp(activation_function_string,"relu"))
@@ -48,8 +49,6 @@ for fold = 1:4
     error = mean_squared_error(y_hat_test, y_test_cv);
     
     cv_error = cv_error + error;
-    
-    
 end
 
 cv_error = cv_error / 5;
