@@ -3,7 +3,7 @@ get_data
 d = size(X_10, 2);
 
 k_values = [1,2,5,10]; 
-q_values = [1,2,3]; 
+q_values = [1,2,3,4,5]; 
 
 err_nn = zeros(3, size(k_values,2)); 
 err_cv_min = zeros(size(k_values,2), size(q_values,2));
@@ -59,21 +59,21 @@ end
 figure
 plot(k_values, err_nn(1, :),'-')
 hold on; 
-plot(k_values, err_nn(2, :),'-')
+plot(k_values, all_perp(2, :),'-')
 hold on;
-plot(k_values, err_nn(3, :),'-')
+plot(k_values, all_perp(3, :),'-')
 title('Using Cross Validation to find Best Value of K')
 xlabel('Value of K') 
 ylabel('Square Error') 
 legend({'Cross Validation Error', 'Training Error','Test Error'})
 
 figure
-plot(k_values, min(err_cv_min.'),'-')
+plot(k_values, err_nn(1, :),'-')
 hold on; 
-plot(k_values, min(err_min_train.'),'-')
+plot(k_values, all_perp(2, :),'-')
 hold on;
-plot(k_values, min(err_min_test.'),'-')
-title('Using Cross Validation to find Best Value of K Using Minkowski distance formula')
+plot(k_values, all_perp(3, :),'-')
+title('Using Cross Validation to find Best Value of K')
 xlabel('Value of K') 
 ylabel('Square Error') 
 legend({'Cross Validation Error', 'Training Error','Test Error'})

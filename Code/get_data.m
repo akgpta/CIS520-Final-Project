@@ -11,22 +11,6 @@ for i = 0:4
    Y_data{i+1} = Y_temp;
 end
 
-% X_10 = readtable('../Matlab-Data/x_2010.csv');
-% X_10 = X_10{:,:};
-% X_10 = standardize(X_10);
-% 
-% X_10 = standardize((readtable('../Matlab-Data/x_2010.csv')));
-% X_11 = standardize((readtable('../Matlab-Data/x_2011.csv')));
-% X_12 = standardize((readtable('../Matlab-Data/x_2012.csv')));
-% X_13 = standardize((readtable('../Matlab-Data/x_2013.csv')));
-% X_14 = standardize((readtable('../Matlab-Data/x_2014.csv')));
-% 
-% Y_10 = (readtable('../Matlab-Data/y_2010.csv'));
-% Y_11 = (readtable('../Matlab-Data/y_2011.csv'));
-% Y_12 = (readtable('../Matlab-Data/y_2012.csv'));
-% Y_13 = (readtable('../Matlab-Data/y_2013.csv'));
-% Y_14 = (readtable('../Matlab-Data/y_2014.csv'));
-
 X_10 = X_data{1};
 X_11 = X_data{2};
 X_12 = X_data{3};
@@ -53,6 +37,9 @@ y_fold_4 = [Y_10; Y_11; Y_12];
 
 X_train = [X_10; X_11; X_12; X_13]; 
 Y_train = [Y_10; Y_11; Y_12; Y_13]; 
+
+X_test = X_14; 
+Y_test = Y_14;
 
 x_folds = {x_fold_1, x_fold_2, x_fold_3, x_fold_4};
 x_tests = {X_10, X_11, X_12, X_13};
