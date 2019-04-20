@@ -13,7 +13,7 @@ function [res] = cartesian(A, d)
     for i = 0:m^d - 1
         curr = zeros(1,d);
         for j = 0:d-1
-            curr(d-j) = A(1 + floor(mod(i,d^(j+1))/d^j));
+            curr(d-j) = A(1 + floor(mod(i,m^(j+1))/m^j));
         end
         res(i+1,:) = curr;
     end
