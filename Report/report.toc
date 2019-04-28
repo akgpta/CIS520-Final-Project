@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {3}Related Work}{3}{section.3}
 \contentsline {subsection}{\numberline {3.1}Related to Models}{3}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Related to Problem}{3}{subsection.3.2}
-\contentsline {section}{\numberline {4}Problem Formulation and Data Set}{4}{section.4}
+\contentsline {section}{\numberline {4}Problem Formulation and Data}{4}{section.4}
 \contentsline {subsection}{\numberline {4.1}Data Processing Needed}{4}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Inputs, Outputs}{4}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Performance Measures}{4}{subsection.4.3}
@@ -17,6 +17,7 @@
 \contentsline {subsection}{\numberline {6.1}Experiments}{4}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}Results}{5}{subsection.6.2}
 \contentsline {section}{\numberline {7}Discussion and Reflections}{5}{section.7}
+\contentsline {subsection}{\numberline {7.1}Takeaways}{5}{subsection.7.1}
 \contentsline {section}{\numberline {8}Acknowledgements}{5}{section.8}
 \contentsline {section}{\numberline {9}References}{6}{section.9}
 \contentsline {section}{\numberline {10}Appendix}{6}{section.10}

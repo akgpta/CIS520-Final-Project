@@ -157,17 +157,19 @@ However, most papers tend to focus on either the economic or behavioral/medical 
 Moreover, most papers perform a time series analysis. We provide a different approach by analyzing the data by country. Papers that do focus on certain regions usually provide analyses on one country or a specific region, whereas we will analyze global statistics. 
 
 
-\section{Problem Formulation and Data Set} 
-\TODO : talk about cleaning (Pandas, Excel)
+\section{Problem Formulation and Data} 
 \subsection{Data Processing Needed} Our data came in a variety of comma-separated formats. A lot of countries were labelled in differing manner and years were often a column and other times a point in a row. We used Excel Pivot Tables to make these more easily parsable and standardized. Later, blanks and other issues with inconsistencies are removed with Python to get an aggregated set of data. Other pre-processing includes removing blanks, reconciling some country names such as (Trinidad \& Tobago vs. Trinidad and Tobago).
+\TODO : talk about cleaning (Pandas, Excel)
 \subsection{Inputs, Outputs} Inputs are a variety of real-valued data points tied to the country. They are described above, but it remains to see which we might have to throw out due to excessive blanks. Most are also measured for a specific year, however some are just duplicated across all years (e.g. Alcohol Consumption). Outputs are a model, which given a countries characteristic features, can predict suicide rates. We have suicide rates by gender (as well as age demographics), so we may also seek a model which predicts a rate for male suicides and a rate for female suicides.
 \subsection{Performance Measures} Given the regression nature of this problem, we believe a squared loss model is appropriate. However, during the course of our work, we may seek alternate loss models such as a proxy for $TPR$ and $TNR$ through some acceptable error window.
 \TODO: address her comments
 
 \section{Solution Methods and Algorithms}
 \TODO : update to what we actually did - why we choose, how they were implemented, what languages 
+\TODO : THIS WHOLE SECTION NEEDS TO BE REWRITTEN FOR WHAT WE ACTUALLY DID \TODO
 \subsection{Algorithms Planned For Use} We will start with least squares regression in unregularized, $L_1$ regularized, and $L_2$ regularized forms. We are not certain whether any of our features will be overly correlated so the unregularized least squares regression may fail. We also seek to explore Nearest Neighbor methods, but not with vanilla Euclidean distance, but with feature weighted scaling on the distances. Lastly, we will consider using decision stubs as features and feeding the transformed input space into another learning model, perhaps Neural Nets.
 \subsection{Justification} As a regression problem, squared loss makes sense as a first choice. Furthermore, we want to limit ourselves to models which actually inform us about the relative importance of features. As such, vanilla nearest neighbors is not informative in the context of our problem. However, determining similarity in which features best informs Nearest Neighbors makes sense given our problem motivation.
+\TODO ABOVE WHOLE SECTION NEEDS TO BE REWRITTEN FOR WHAT WE ACTUALLY DID \TODO
 
 \section{Experimental Design and Results}
 \subsection{Experiments}
@@ -181,7 +183,11 @@ performance and examples of what types of errors are made, etc.
 \includegraphics[width=\columnwidth]{geo-bee.jpg}
 
 \section{Discussion and Reflections}
-\TODO : A LOT OF GOOD STUFF IN MESSENGER \TODO
+\TODO
+\subsection{Takeaways}
+\TODO good stuff in messenger \TODO
+
+
 
 
 % \subsection{Pre-Milestone Meeting Goals} 
