@@ -36,50 +36,83 @@
 \titlespacing\subsubsection{0pt}{0pt plus 4pt minus 2pt}{-5pt plus 2pt minus 2pt}
 
 
-
-% Modify here to change homework number, name, and PennKey as necessary.
-\newcommand{\HomeworkNo}{1}
-\newcommand{\MyName}{Amit Gupta, Monal Garg, Aashish Jain, Moksh Jawa}
-\newcommand{\MyPennKey}{akgupta@seas, mgarg@sas, aashj99@seas, moksh@seas}
-\newcommand{\Class}{CIS520}
-
 \newcommand{\TODO}{\textcolor{red}{\textbf{\hl{TODO}}}}
 
-\newcommand{\PrintFirstHeader}{
-  \Large{\Class} - \large{Group 10} \hfill {\Large{\MyName}}
-  \\
-   \vspace{5pt} \hfill \normalsize{\MyPennKey}
-  \\
-  {\LARGE{\textbf{Project Proposal}}}  \hfill {\Large{March, 2019}}
-
-  \rule{\textwidth}{0.4pt}
-
-  \vspace{200pt}
-
-  \begin{table}[ht]
-\begin{tabular}{l|l}
-\Large{Team Member} & \Large{Contributions} \\ \hline
-  \normalsize{Monal}         &    \normalsize{Past Work, Solution Approach, Machine Learning Algorithms, Visualizations, Report}           \\
-   \normalsize{Amit}         &        \normalsize{Problem Formulation, Algorithms Plan for Use, Machine Learning Algorithms, Visualizations, Report}       \\
-            \normalsize{Aashish}&       \normalsize{Data Cleaning, Data Stitching, Machine Learning Algorithms, Visualizations, Report}        \\
-         \normalsize{Moksh}   &            \normalsize{Data Cleaning, Data Stitching, Machine Learning Algorithms, Visualizations, Report}  
-\end{tabular}
-\end{table}
-
-\vspace{200pt}
-
-\Large{Code Submission:} \normalsize{Public GitHub Repo can be found at\href{https://github.com/akgpta/CIS520-Final-Project}{https://github.com/akgpta/CIS520-Final-Project}}
-
-
-
-}
-
-
-
 \begin{document}
-\thispagestyle{firstpage}
-\PrintFirstHeader{}
-\pagebreak
+% \thispagestyle{firstpage}
+% \PrintFirstHeader{}
+% \pagebreak
+
+
+%================================ COVER PAGE ================================
+
+%*********** Use this for project proposal (comment out in project report) ************
+\emph{\footnotesize{CIS 520 Spring 2019, Project Report}}
+
+%*********** Use this for project report (comment out in project proposal) ************
+%\emph{\footnotesize{CIS 520 Spring 2018, Project Report}}
+
+\vspace{12pt}
+
+%Fill in your project title
+\textbf{\Large{Project Title}}
+
+\vspace{1cm}
+
+\textbf{Team Members:} \\
+%Fill in your team details; remove any lines that are not needed
+Monal Garg (PennKey: \texttt{mgarg}; Email: \texttt{mgarg@sas.upenn.edu}) \\
+Amit Gupta (PennKey: \texttt{akgupta}; Email: \texttt{akgupta@seas.upenn.edu}) \\
+Aashish Jain (PennKey: \texttt{aashj99}; Email: \texttt{aashj99@seas.upenn.edu}) \\
+Moksh Jawa (PennKey: \texttt{moksh}; Email: \texttt{moksh@seas.upenn.edu})
+
+%---
+
+\vspace{2cm}
+
+%*********** Comment out the following for the proposal; uncomment and fill in all details for the project report ***********
+
+\textbf{Assigned Project Mentor:}
+
+%Fill in assigned TA name
+Jane Lee
+
+\vspace{1cm}
+
+\textbf{Team Member Contributions:}
+
+%Fill in team member contributions
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+Team Member & Contributions \\
+\hline
+Monal Garg & Past Work, Solution Approach, Machine Learning Algorithms, Visualizations, Report \\
+  & (continue if needed) \\
+\hline
+Amit Gupta & Problem Formulation, Algorithms Plan for Use, Machine Learning Algorithms, Visualizations, Report \\
+  & (continue if needed) \\
+\hline
+Aashish Jain & Data Cleaning, Data Stitching, Machine Learning Algorithms, Visualizations, Report \\
+  & (continue if needed) \\
+\hline
+Moksh Jawa & Data Cleaning, Data Stitching, Machine Learning Algorithms, Visualizations, Report \\
+  & (continue if needed) \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{12pt}
+
+\textbf{Code Submission:}
+
+\normalsize{Public GitHub Repo can be found at\href{https://github.com/akgpta/CIS520-Final-Project}{https://github.com/akgpta/CIS520-Final-Project}}
+
+
+
+\newpage
+\tableofcontents
+\newpage
 
 \section{Abstract}
 \TODO\TODO\TODO\TODO\TODO\TODO\TODO\TODO\TODO\TODO\TODO\TODO\TODO\TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO \TODO\TODO\TODO\TODO
@@ -87,7 +120,8 @@
 \section{Introduction}
 \subsection{Problem Motivation} Unfortunately, it is a sad reality that many individuals each year commit suicide. We in the U.S. are slowly being aware of this issue, but we wanted to understand suicide rates internationally. Especially, we wanted to look at these rates as they related to common features of each country, such as GDP, unemployment, and alcohol consumption. At a high-level we wanted to draw out any meaningful relationship between these macro features and suicide rates.
 \subsection{Data Set and Source} Our project grew from an intriguing 
-World Health Organization data set will well over 35 years of suicide rates by country broken up by demographics.  \endnote{https://www.kaggle.com/szamil/who-suicide-statistics}. In an effort to extend existing analyses though, we actually sources global data from a variety of sources. This included a FiveThirtyEight data set on alcohol consumptixon \endnote{https://www.kaggle.com/fivethirtyeight/fivethirtyeight-alcohol-consumption-dataset}. We also incorporated a World Bank Data Set on Youth Unemployment \endnote{https://www.kaggle.com/sovannt/world-bank-youth-unemployment} and another from the World Bank on population, fertility, and life expectancy \endnote{https://www.kaggle.com/gemartin/world-bank-data-1960-to-2016}.
+World Health Organization data set will well over 35 years of suicide rates by country broken up by demographics.  \endnote{https://www.kaggle.com/szamil/who-suicide-statistics}. In an effort to extend existing analyses though, we actually sources global data from a variety of sources. This included a FiveThirtyEight data set on alcohol consumptixon \endnote{https://www.kaggle.com/fivethirtyeight/fivethirtyeight-alcohol-consumption-dataset}. We also incorporated a World Bank Data Set on Youth Unemployment \endnote{https://www.kaggle.com/sovannt/world-bank-youth-unemployment} and another from the World Bank on population, fertility, and life expectancy \endnote{https://www.kaggle.com/gemartin/world-bank-data-1960-to-2016}. A lot of the work done was with respect to time series and things like that. What we wanted to do, though, was take a look at combining data from multiple sources. 
+Our project team sought to understand a little bit more about the intricacies of sourcing data from multiple places. This proved to be a difficult challenge.  
 \subsection{Summary Statistics} 
 We've provided summary statistics for 4 of the datasets we will be using in our project shown in Tables \hyperref[summary-statistic-table-alcohol]{0}, \ref{summary-statistic-table-youth-unemployment}, \ref{summary-statistic-table-fertility}, \ref{summary-statistic-table-life}, some of which are located in the appendix.
 
@@ -153,9 +187,6 @@ performance and examples of what types of errors are made, etc.
 % \subsection{Timelines}
 
 % After our milestone meeting, we will have exactly 3 weeks. The first week will involve implementing our last approach of decision stubs as features and feeding them into neural nets. The second week will involve finetuning and evaluating our models. The last week will be for writing up the report
-
-\section{}
-\TODO
 
 \section{Acknowledgements} \TODO N/A
 
