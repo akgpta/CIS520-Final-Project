@@ -52,14 +52,38 @@
   \\
   {\LARGE{\textbf{Project Proposal}}}  \hfill {\Large{March, 2019}}
 
-  \rule{\textwidth}{0.4pt}}
+  \rule{\textwidth}{0.4pt}
+
+  \vspace{200pt}
+
+  \begin{table}[ht]
+\begin{tabular}{l|l}
+\Large{Team Member} & \Large{Contributions} \\ \hline
+  \normalsize{Monal}         &    \normalsize{Past Work, Solution Approach, Machine Learning Algorithms, Visualizations, Report}           \\
+   \normalsize{Amit}         &        \normalsize{Problem Formulation, Algorithms Plan for Use, Machine Learning Algorithms, Visualizations, Report}       \\
+            \normalsize{Aashish}&       \normalsize{Data Cleaning, Data Stitching, Machine Learning Algorithms, Visualizations, Report}        \\
+         \normalsize{Moksh}   &            \normalsize{Data Cleaning, Data Stitching, Machine Learning Algorithms, Visualizations, Report}  
+\end{tabular}
+\end{table}
+
+\vspace{200pt}
+
+\Large{Code Submission:} \normalsize{Public GitHub Repo can be found at\href{https://github.com/akgpta/CIS520-Final-Project}{https://github.com/akgpta/CIS520-Final-Project}}
+
+
+
+}
+
+
 
 \begin{document}
 \thispagestyle{firstpage}
 \PrintFirstHeader{}
+\pagebreak
 
+\section{Abstract}
+\TODO\TODO\TODO\TODO\TODO\TODO\TODO\TODO\TODO\TODO\TODO\TODO\TODO\TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO \TODO\TODO\TODO\TODO
 \begin{multicols}{2}
-
 \section{Introduction}
 \subsection{Problem Motivation} Unfortunately, it is a sad reality that many individuals each year commit suicide. We in the U.S. are slowly being aware of this issue, but we wanted to understand suicide rates internationally. Especially, we wanted to look at these rates as they related to common features of each country, such as GDP, unemployment, and alcohol consumption. At a high-level we wanted to draw out any meaningful relationship between these macro features and suicide rates.
 \subsection{Data Set and Source} Our project grew from an intriguing 
@@ -98,42 +122,48 @@ However, most papers tend to focus on either the economic or behavioral/medical 
 Moreover, most papers perform a time series analysis. We provide a different approach by analyzing the data by country. Papers that do focus on certain regions usually provide analyses on one country or a specific region, whereas we will analyze global statistics. 
 
 
-\section{Problem Formulation} 
+\section{Problem Formulation and Data Set} 
+\TODO : talk about cleaning (Pandas, Excel)
 \subsection{Data Processing Needed} Our data came in a variety of comma-separated formats. A lot of countries were labelled in differing manner and years were often a column and other times a point in a row. We used Excel Pivot Tables to make these more easily parsable and standardized. Later, blanks and other issues with inconsistencies are removed with Python to get an aggregated set of data. Other pre-processing includes removing blanks, reconciling some country names such as (Trinidad \& Tobago vs. Trinidad and Tobago).
 \subsection{Inputs, Outputs} Inputs are a variety of real-valued data points tied to the country. They are described above, but it remains to see which we might have to throw out due to excessive blanks. Most are also measured for a specific year, however some are just duplicated across all years (e.g. Alcohol Consumption). Outputs are a model, which given a countries characteristic features, can predict suicide rates. We have suicide rates by gender (as well as age demographics), so we may also seek a model which predicts a rate for male suicides and a rate for female suicides.
 \subsection{Performance Measures} Given the regression nature of this problem, we believe a squared loss model is appropriate. However, during the course of our work, we may seek alternate loss models such as a proxy for $TPR$ and $TNR$ through some acceptable error window.
 \TODO: address her comments
 
-\section{Solution Methods}
+\section{Solution Methods and Algorithms}
+\TODO : update to what we actually did - why we choose, how they were implemented, what languages 
 \subsection{Algorithms Planned For Use} We will start with least squares regression in unregularized, $L_1$ regularized, and $L_2$ regularized forms. We are not certain whether any of our features will be overly correlated so the unregularized least squares regression may fail. We also seek to explore Nearest Neighbor methods, but not with vanilla Euclidean distance, but with feature weighted scaling on the distances. Lastly, we will consider using decision stubs as features and feeding the transformed input space into another learning model, perhaps Neural Nets.
 \subsection{Justification} As a regression problem, squared loss makes sense as a first choice. Furthermore, we want to limit ourselves to models which actually inform us about the relative importance of features. As such, vanilla nearest neighbors is not informative in the context of our problem. However, determining similarity in which features best informs Nearest Neighbors makes sense given our problem motivation.
 
-\section{Plan of Work}
-\subsection{Team Member Tasks} 
+\section{Experimental Design and Results}
+\subsection{Experiments}
+\TODO Describe how you set up your experiments, including choice
+of training/testing data, choice of parameters, etc, in a way that your results can be reproduced
+\subsection{Results}
+\TODO training/testing times, possible visualizations of results including both examples of good
+performance and examples of what types of errors are made, etc.
 
-Monal: Past Work, Solution Approach, Machine Learning Algorithms, Visualizations, Report
+\section{Discussion and Reflections}
+\TODO : A LOT OF GOOD STUFF IN MESSENGER \TODO
 
-Amit: Problem Formulation, Algorithms Plan for Use, Machine Learning Algorithms, Visualizations, Report
 
-Ash: Data Cleaning, Data Stitching, Machine Learning Algorithms, Visualizations, Report
+% \subsection{Pre-Milestone Meeting Goals} 
 
-Moksh: Data Cleaning, Data Stitching, Machine Learning Algorithms, Visualization, Report
+% Our goal before our milestone meeting is have the data completed clean and visualized. Additionally, we plan to have k-Nearest Neighbors and Least Squares Regression implemented, visualized, and results recorded. Note that our k-Nearest Neighbor implementation will have weighted scaling based on features rather than Euclidean distance.
 
-\subsection{Pre-Milestone Meeting Goals} 
+% \subsection{Timelines}
 
-Our goal before our milestone meeting is have the data completed clean and visualized. Additionally, we plan to have k-Nearest Neighbors and Least Squares Regression implemented, visualized, and results recorded. Note that our k-Nearest Neighbor implementation will have weighted scaling based on features rather than Euclidean distance.
+% After our milestone meeting, we will have exactly 3 weeks. The first week will involve implementing our last approach of decision stubs as features and feeding them into neural nets. The second week will involve finetuning and evaluating our models. The last week will be for writing up the report
 
-\subsection{Timelines}
+\section{}
+\TODO
 
-After our milestone meeting, we will have exactly 3 weeks. The first week will involve implementing our last approach of decision stubs as features and feeding them into neural nets. The second week will involve finetuning and evaluating our models. The last week will be for writing up the report.
-
-\section{Acknowledgements} N/A
+\section{Acknowledgements} \TODO N/A
 
 \end{multicols}
 
 \pagebreak
 
-\section{References} \theendnotes
+\section{References} \TODO: update? \theendnotes
 
 \section{Appendix} 
 \begin{table}[ht]
