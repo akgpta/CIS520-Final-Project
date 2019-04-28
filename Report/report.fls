@@ -226,7 +226,13 @@ INPUT report.toc
 OUTPUT report.toc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT 2012-data-vis-map.png
+INPUT ./2012-data-vis-map.png
+INPUT ./2012-data-vis-map.png
 OUTPUT report.ent
+INPUT geo-bee.jpg
+INPUT ./geo-bee.jpg
+INPUT ./geo-bee.jpg
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT report.ent
 INPUT report.ent
