@@ -167,17 +167,15 @@ Moreover, most papers perform a time series analysis. We provide a different app
 \section{Solution Methods and Algorithms}
 \TODO : update to what we actually did - why we choose, how they were implemented, what languages 
 \TODO : THIS WHOLE SECTION NEEDS TO BE REWRITTEN FOR WHAT WE ACTUALLY DID \TODO
-\subsection{Algorithms Planned For Use} We will start with least squares regression in unregularized, $L_1$ regularized, and $L_2$ regularized forms. We are not certain whether any of our features will be overly correlated so the unregularized least squares regression may fail. We also seek to explore Nearest Neighbor methods, but not with vanilla Euclidean distance, but with feature weighted scaling on the distances. Lastly, we will consider using decision stubs as features and feeding the transformed input space into another learning model, perhaps Neural Nets.
-\subsection{Justification} As a regression problem, squared loss makes sense as a first choice. Furthermore, we want to limit ourselves to models which actually inform us about the relative importance of features. As such, vanilla nearest neighbors is not informative in the context of our problem. However, determining similarity in which features best informs Nearest Neighbors makes sense given our problem motivation.
-\TODO ABOVE WHOLE SECTION NEEDS TO BE REWRITTEN FOR WHAT WE ACTUALLY DID \TODO
+\subsection{Algorithms Used} \TODO describe algorithms, implementations, etc.. \TODO We will start with least squares regression in unregularized, $L_1$ regularized, and $L_2$ regularized forms. We are not certain whether any of our features will be overly correlated so the unregularized least squares regression may fail. We also seek to explore Nearest Neighbor methods, but not with vanilla Euclidean distance, but with feature weighted scaling on the distances. Lastly, we will consider using decision stubs as features and feeding the transformed input space into another learning model, perhaps Neural Nets.
 
 \section{Experimental Design and Results}
 \subsection{Experiments}
 \TODO Describe how you set up your experiments, including choice
-of training/testing data, choice of parameters, etc, in a way that your results can be reproduced
+of training/testing data, choice of parameters, etc, in a way that your results can be reproduced \TODO
 \subsection{Results}
 \TODO training/testing times, possible visualizations of results including both examples of good
-performance and examples of what types of errors are made, etc.
+performance and examples of what types of errors are made, etc. \TODO
 
 \includegraphics[width=\columnwidth]{geo-bee.jpg}
 The best predictor of suicide rates is the country label itself. Suicide rates in Ghana in 2013 are going to look like suicide rates in Ghana in 2012 most. Modelling this regression outcome as independent draws disregards the time series data and correlation of examples. As such, nearest neighbors performs exceptionally well, since it just recognized the country through these 8 input features. 
