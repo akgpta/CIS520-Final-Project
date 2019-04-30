@@ -161,45 +161,39 @@ Moreover, most papers perform a time series analysis. We provide a different app
 \section{Problem Formulation and Data} 
 \subsection{Data Processing Needed} Our data came in a variety of comma-separated formats. A lot of countries were labelled in differing manner and years were often a column and other times a point in a row. We used Excel Pivot Tables to make the CSVs more easily parsable and standardized. Later, we used Pandas and Python to remove blanks and other issues with inconsistencies and finish with an aggregated set of data. Other pre-processing includes filling in missing values, reconciling some country names such as (Trinidad \& Tobago vs. Trinidad and Tobago), and dropping some values if a country was not universal across all CSVs. Our final product was a single CSV with 78 rows (countries) with columns for each of the 8 features. The relatively small number of countries is a testament to the variance in countries in each dataset as well as the missing values.
 \subsection{Inputs, Outputs} Inputs are a variety of real-valued data points tied to the country. They are described above. Most are also measured for a specific year, however some are just duplicated across all years (e.g. Alcohol Consumption). Such data points were simply treated as constant for a country through time. We threw out examples which were missing features our true values. Outputs are a model, which given a countries characteristic features, can predict suicide rates. 
-\subsection{Performance Measures} Given the regression nature of this problem, we used squared loss model to measure our performance. This is because with positive real valued data with explicit bounds of $[0, 10^5]$, but more reasonable empirical bounds of around $[0, 10^3]$. The following image is a representation of squared loss,but in a one dimensional feature space \endnote{https://blog.algorithmia.com/introduction-to-loss-functions/\textbf{}}. 
+\subsection{Performance Measures} Given the regression nature of this problem, we used squared loss model to measure our performance. This is because with positive real valued data with explicit bounds of $[0, 10^5]$, but more reasonable empirical bounds of around $[0, 10^3]$. The following image is a representation of squared loss,but in a one dimensional feature space \endnote{https://blog.algorithmia.com/introduction-to-loss-functions/.}
 \includegraphics[width=\columnwidth]{squared-loss.png}
 
 
-\section{Solution Methods and Algorithms}
+\section{Methods and Results}
+\subsection{Experiment Set Up} Altogether, we had 5 years worth of data on $80$ countries. We kept the training, test, and folds the same when implementing all methods. The data from 2014 data was reserved as the test data and we trained our models on the data from $2010$ to $2013$. Four folds were set up that such that each one reserved a different year from the $2010$ to $2013$ data. 
 
-\subsection{$k$ Nearest-Neighbors} We first implemented a $k$-nearest neighbor algorithm using Euclidean distance as we suspected that suicide rates between similar countries would be comparable. We cross validated across the following values of $k = [1, 2, 5, 10]$ and found that $k = 1$ produced the best model. 
+\subsection{Linear Regression} As most related papers ran linear regression, we also ran regularized and unregularized least squares linear regression to see if perhaps we could prevent this overfitting. This is our base line model \TODO 
+
+\includegraphics[width=\columnwidth]{lin-reg.png}
+
+\subsection{$k$ Nearest-Neighbors} We first implemented a $k$-nearest neighbor algorithm using Euclidean distance as we suspected suicide rates between similar countries would be comparable. We cross validated across the following values of $k = [1,2, 3, 4, 5, 6, 7, 8, 9, 10]$ and found that $k = 1$ produced the best model with a cross validation squared error of $4.697 * 10^4$, training error of $8.160 * 10^6$ and test error of $1.720 * 10^6$. \TODO analysis on the error. Although these errors may seem high, they are not too bad (they are over 80 countries and squared)
+
+The graph below shows these results. Here we have omitted training and test error to highlight an interesting trend. Recall that our each of our folds have data of $3$ years. We suspect that the error is very low until $k = 3$ because the folds are using the $3$ data points from that same country. Errors pick up after $k = 3$ due to the way the folds are structured \TODO fix wording
+
+\includegraphics[width=\columnwidth]{../Figures/k-nn-error-cv.jpg}
 
 To take this a step further, we also built a near neighbor model using Minkowski's distance, a more general distance formula, shown below.
 
 \[D\left(\mathbf{x}_{i}, \mathbf{x}_{j}\right)=\left(\sum_{l=1}^{d}\left|x_{i l}-x_{j l}\right|^{p}\right)^{1/p}\]
 
-We cross validated across the following values of $p = [1, 2, 3]$ and for each of these $p$ values, found the best $k = 1$ value.
+We cross validated across the following values of $p = [1, 2, 3, 4, 5]$ and for each of these $p$ values, found the best $k = 1$ value.
 
 
 - similarly found k = 1, p = 2 (Euclidean distance) produced best model
 
-\subsection{Neural Network} Ran neural net on $1$ hidden network...
-
-\subsection{Linear Regression} As most related papers ran linear regression, we also ran regularized and unregularized least squares linear regression to see if perhaps we could prevent this overfitting. Ehhhhh
-
-\section{Experimental Design and Results}
-\subsection{Experiments} \TODO Describe how you set up your experiments, including choice
-of training/testing data, choice of parameters, etc, in a way that your results can be reproduced \TODO 
-- cross validation set up
-- training/testing data
+\subsection{Neural Network} \TODO(Aashish) Ran neural net on $1$ hidden network...
 
 \subsection{Results}
 From these results, we began to suspect that nearest neighbors may just be memorizing the countries previous suicide history. Indeed when we looked further into the data, we realized that the countries were too distinct, causing the countries to be most similar to themselves. 
 
-\includegraphics[width=\columnwidth]{lin-reg.png}
-
 When we ran neural net with 1 hidden layer, we saw that our model only got better as the model’s complexity increased, further showing that our model was essentially grossly overfitting to the train data and essentially functioning as a memorizer.
 \includegraphics[width=\columnwidth]{neur-net.png}
-
-
-
-\TODO training/testing times, possible visualizations of results including both examples of good
-performance and examples of what types of errors are made, etc. \TODO
 
 \includegraphics[width=\columnwidth]{geo-bee.jpg}
 The best predictor of suicide rates is the country label itself. Suicide rates in Ghana in 2013 are going to look like suicide rates in Ghana in 2012 most. Modelling this regression outcome as independent draws disregards the time series data and correlation of examples. As such, nearest neighbors performs exceptionally well, since it just recognized the country through these 8 input features. 
@@ -231,7 +225,7 @@ There are a finite number of countries in the world. In fact, there are 195 coun
 
 \pagebreak
 
-\section{References} \TODO: update? \theendnotes
+\section{References} \theendnotes
 
 \section{Appendix} 
 \begin{table}[ht]

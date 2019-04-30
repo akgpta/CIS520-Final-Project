@@ -1,4 +1,4 @@
-PWD /Users/akgupta/Documents/School/College/Sophomore/Spring/CIS520/CIS520-Final-Project/Report
+PWD /Users/monal/Desktop/Classes/CIS520/CIS520-Final-Project/Report
 INPUT /usr/local/texlive/2018/texmf.cnf
 INPUT /usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
@@ -233,6 +233,9 @@ OUTPUT report.ent
 INPUT squared-loss.png
 INPUT ./squared-loss.png
 INPUT ./squared-loss.png
+INPUT lin-reg.png
+INPUT ./lin-reg.png
+INPUT ./lin-reg.png
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -250,11 +253,11 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT ../Figures/k_nn_error_cv.png
+INPUT ../Figures/k_nn_error_cv.png
+INPUT ../Figures/k_nn_error_cv.png
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
-INPUT lin-reg.png
-INPUT ./lin-reg.png
-INPUT ./lin-reg.png
 INPUT neur-net.png
 INPUT ./neur-net.png
 INPUT ./neur-net.png
