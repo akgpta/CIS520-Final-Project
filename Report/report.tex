@@ -167,17 +167,16 @@ Moreover, most papers perform a time series analysis. We provide a different app
 
 \section{Solution Methods and Algorithms}
 
-\subsection{$k$ Nearest-Neighbors} We first implemented a $k$-nearest neighbor algorithm using Euclidean distance as we suspected that suicide rates between similar countries would be comparable. 
+\subsection{$k$ Nearest-Neighbors} We first implemented a $k$-nearest neighbor algorithm using Euclidean distance as we suspected that suicide rates between similar countries would be comparable. We cross validated across the following values of $k = [1, 2, 5, 10]$ and found that $k = 1$ produced the best model. 
 
-- good stepping stone,  thought first would be good to compare countries to other countries
-
-- With Euclidean distance, we found $k=1$ was the best
-
-- Also tried Minkowski's distance, a more general distance formula
+To take this a step further, we also built a near neighbor model using Minkowski's distance, a more general distance formula, shown below.
 
 \[D\left(\mathbf{x}_{i}, \mathbf{x}_{j}\right)=\left(\sum_{l=1}^{d}\left|x_{i l}-x_{j l}\right|^{p}\right)^{1/p}\]
 
-- similarly found k = 1, p = 2 (eucledian distance) produced best model
+We cross validated across the following values of $p = [1, 2, 3]$ and for each of these $p$ values, found the best $k = 1$ value.
+
+
+- similarly found k = 1, p = 2 (Euclidean distance) produced best model
 
 \subsection{Neural Network} Ran neural net on $1$ hidden network...
 
@@ -192,10 +191,12 @@ of training/testing data, choice of parameters, etc, in a way that your results 
 \subsection{Results}
 From these results, we began to suspect that nearest neighbors may just be memorizing the countries previous suicide history. Indeed when we looked further into the data, we realized that the countries were too distinct, causing the countries to be most similar to themselves. 
 
-When we ran neural net with 1 hidden layer, we saw that our model only got better as the model’s complexity increased, further showing that our model was essentially grossly overfitting to the train data and essentially functioning as a memorizer. 
-
 \includegraphics[width=\columnwidth]{lin-reg.png}
+
+When we ran neural net with 1 hidden layer, we saw that our model only got better as the model’s complexity increased, further showing that our model was essentially grossly overfitting to the train data and essentially functioning as a memorizer.
 \includegraphics[width=\columnwidth]{neur-net.png}
+
+
 
 \TODO training/testing times, possible visualizations of results including both examples of good
 performance and examples of what types of errors are made, etc. \TODO
