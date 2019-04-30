@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1556642617 "report.tex" "report.pdf" "report" 1556642618
+["pdflatex"] 1556642769 "report.tex" "report.pdf" "report" 1556642770
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1480098696 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
@@ -162,16 +162,18 @@
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "2012-data-vis-map.png" 1556487007 233803 a39bcc816d50aaa7c3f9d9830ef032af ""
   "geo-bee.jpg" 1556487140 41949 6c247ab8cb9226c8825f8559c1477819 ""
-  "report.aux" 1556642618 3582 1eee5cca43d9a6d3b2ffa55c0cbc93e3 ""
-  "report.ent" 1556642618 1067 5d4cac2efdfbff50d7d296a179b4c098 ""
-  "report.out" 1556642618 1399 c84a10f8dd85071cf94c64fe6348a939 ""
-  "report.tex" 1556642614 21119 979debe7d57947fa623f74f6690cf6d7 ""
-  "report.toc" 1556642618 1796 670903f0f337c5d11970671b55416cfe ""
+  "lin-reg.png" 1556642711 67917 73a18ed910c29e0fb91c9475782b17af ""
+  "neur-net.png" 1556642720 57845 e57363c8dc4c81383cd1af3fb4c7f775 ""
+  "report.aux" 1556642770 3582 6bead3da55cf2dc7378f5182d45c57ec ""
+  "report.ent" 1556642769 1067 5d4cac2efdfbff50d7d296a179b4c098 ""
+  "report.out" 1556642770 1399 c84a10f8dd85071cf94c64fe6348a939 ""
+  "report.tex" 1556642767 21219 237331ad92d56b5462ae3b8738dc0904 ""
+  "report.toc" 1556642770 1796 ebc833cfea8ef54a5c0b813ad1fb53e3 ""
   "squared-loss.png" 1556641464 97733 dfaf3316f759427f43f895a3352f90f1 ""
   (generated)
-  "report.out"
-  "report.log"
   "report.ent"
-  "report.pdf"
   "report.toc"
+  "report.pdf"
+  "report.log"
   "report.aux"
+  "report.out"

@@ -175,7 +175,7 @@ Moreover, most papers perform a time series analysis. We provide a different app
 
 - Also tried Minkowski's distance, a more general distance formula
 
-\[D\left(\mathbf{x}_{i}, \mathbf{x}_{j}\right)=\left(\sum_{l=1}^{d}\left|x_{i l}-x_{j l}\right|^{1 / p}\right)^{p}\]
+\[D\left(\mathbf{x}_{i}, \mathbf{x}_{j}\right)=\left(\sum_{l=1}^{d}\left|x_{i l}-x_{j l}\right|^{p}\right)^{1/p}\]
 
 - similarly found k = 1, p = 2 (eucledian distance) produced best model
 
@@ -193,6 +193,9 @@ of training/testing data, choice of parameters, etc, in a way that your results 
 From these results, we began to suspect that nearest neighbors may just be memorizing the countries previous suicide history. Indeed when we looked further into the data, we realized that the countries were too distinct, causing the countries to be most similar to themselves. 
 
 When we ran neural net with 1 hidden layer, we saw that our model only got better as the model’s complexity increased, further showing that our model was essentially grossly overfitting to the train data and essentially functioning as a memorizer. 
+
+\includegraphics[width=\columnwidth]{lin-reg.png}
+\includegraphics[width=\columnwidth]{neur-net.png}
 
 \TODO training/testing times, possible visualizations of results including both examples of good
 performance and examples of what types of errors are made, etc. \TODO

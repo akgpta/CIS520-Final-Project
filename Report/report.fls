@@ -252,6 +252,12 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm1
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
+INPUT lin-reg.png
+INPUT ./lin-reg.png
+INPUT ./lin-reg.png
+INPUT neur-net.png
+INPUT ./neur-net.png
+INPUT ./neur-net.png
 INPUT geo-bee.jpg
 INPUT ./geo-bee.jpg
 INPUT ./geo-bee.jpg

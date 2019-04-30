@@ -17,7 +17,7 @@
 \contentsline {section}{\numberline {6}Experimental Design and Results}{5}{section.6}
 \contentsline {subsection}{\numberline {6.1}Experiments}{5}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}Results}{5}{subsection.6.2}
-\contentsline {section}{\numberline {7}Discussion and Reflections}{5}{section.7}
+\contentsline {section}{\numberline {7}Discussion and Reflections}{6}{section.7}
 \contentsline {section}{\numberline {8}Acknowledgements}{6}{section.8}
 \contentsline {section}{\numberline {9}References}{7}{section.9}
 \contentsline {section}{\numberline {10}Appendix}{7}{section.10}
