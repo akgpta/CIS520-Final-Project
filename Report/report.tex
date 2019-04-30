@@ -168,7 +168,7 @@ Moreover, most papers perform a time series analysis. We provide a different app
 \section{Methods and Results}
 \subsection{Experiment Set Up} Altogether, we had five years worth of data on $78$ countries. We maintained the same training data, test data, and folds when implementing all three types of models. The data from 2014 data was reserved as the test data and we trained our models on the data from $2010$ to $2013$. Four folds were set up that such that each one reserved a different year from the $2010$ to $2013$ data to test with. 
 
-\subsection{k Nearest-Neighbors} We first implemented a $k$-nearest neighbor algorithm using Euclidean distance as we suspected suicide rates between similar countries would be comparable. We cross validated across the following values of $k = [1,2, 3, 4, 5, 6, 7, 8, 9, 10]$ and found that $k = 1$ produced the best model with a cross validation squared error of $4.697 * 10^4$, training error of $8.160 * 10^6$ and test error of $1.720 * 10^6$. Although this error appears to be high, we remind the reader that this squared error is taken over $78$ test data points and each of the suicide rate values can be as large as $10000$. 
+\subsection{k Nearest-Neighbors} We first implemented a $k$-nearest neighbor algorithm using Euclidean distance as we suspected suicide rates between similar countries would be comparable. We cross validated across the following values of $k = [1,2, 3, 4, 5, 6, 7, 8, 9, 10]$ and found that $k = 1$ produced the best model with a cross validation squared error of $4.697 * 10^4$, training error of $8.160 * 10^6$ and test error of $1.720 * 10^6$. Although this error appears to be high, we remind the reader that this squared error is taken over $78$ test data points per fold and each of the suicide rate values can be as large as $10000$. In fact, if you average this cross validation error over these points and square root you get an average error of $\sqrt{\frac{4.697 * 10^4}{78}} \approx 24.5 $ on each sample. 
 
 The graph below shows the results when cross-validating over different $k$ values. Here we have omitted the training and test error to highlight an interesting trend in cross-validation error. Recall that our each of our folds have data of from each country of $3$ years. Say we are looking for the nearest neighbors for country $x$. We suspect that the error is very low for $k$ values of $1, 2, 3$ because the model is utilizing the country $x$'s $3$ data points from different years to predict suicide rates for the test year. Errors then pick up for values of $k$ greater than $3$ because the model is forced to use the data from countries other than country $x$, which may not be as informative when making decision about suicide rates for country $x$. 
 
@@ -180,9 +180,15 @@ To take this a step further, we also built a near neighbor model using Minkowski
 
 We cross validated across the following values of $q = [1, 2, 3, 4, 5]$ and for each of these $q$ values, found the best $k$ value. Interestingly, we found for each value of $q$, $k = 1$ produced the minimum squared error. Moreover, the same phenomenon of small errors for $k$ values from one to tree and relatively larger errors for every subsequent value of $k$ was observed for all values of $q$. Overall, $k = 1$ and $q = 2$ (which is equivalent to Euclidean distance) produced the best model.
 
-\includegraphics[width=\columnwidth]{../Figures/k-nn-err-cv-minkowski.jpg}
+\includegraphics[width=\columnwidth]{../Figures/k_nn_err_cv_minkowski.jpg}
+
+From these results, we began to suspect that nearest neighbors may just be memorizing the countries suicide history. Indeed when we looked further into the data, we realized that the countries very distinct, causing the countries to be most similar to themselves.
 
 \subsection{Neural Network} \TODO(Aashish) Ran neural net on $1$ hidden network...
+
+When we ran neural net with 1 hidden layer, we saw that our model only got better as the model’s complexity increased, further showing that our model was essentially grossly overfitting to the train data and essentially functioning as a memorizer.
+
+\includegraphics[width=\columnwidth]{neur-net.png}
 
 \subsection{Linear Regression} First, we implemented a linear regression as our base line model. 
 
@@ -191,10 +197,9 @@ A most related papers ran linear regression, we also ran regularized and unregul
 
 \includegraphics[width=\columnwidth]{lin_reg.png}
 
-\subsection{Results}
+\subsection{Overall Results}
 
-When we ran neural net with 1 hidden layer, we saw that our model only got better as the model’s complexity increased, further showing that our model was essentially grossly overfitting to the train data and essentially functioning as a memorizer.
-\includegraphics[width=\columnwidth]{neur-net.png}
+Ended up with memorizers on neural net and nearest neighbors.
 
 \includegraphics[width=\columnwidth]{geo-bee.jpg}
 The best predictor of suicide rates is the country label itself. Suicide rates in Ghana in 2013 are going to look like suicide rates in Ghana in 2012 most. Modelling this regression outcome as independent draws disregards the time series data and correlation of examples. As such, nearest neighbors performs exceptionally well, since it just recognized the country through these 8 input features. 
