@@ -233,6 +233,9 @@ OUTPUT report.ent
 INPUT squared-loss.png
 INPUT ./squared-loss.png
 INPUT ./squared-loss.png
+INPUT lin-reg.png
+INPUT ./lin-reg.png
+INPUT ./lin-reg.png
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -252,9 +255,6 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm1
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
-INPUT lin-reg.png
-INPUT ./lin-reg.png
-INPUT ./lin-reg.png
 INPUT neur-net.png
 INPUT ./neur-net.png
 INPUT ./neur-net.png

@@ -15,7 +15,7 @@ function [Y_output] = k_nearest_neighbor_minkowski(X_train, Y_train, k, X_test, 
 Y_output = zeros(m, 1);
 
 for i = 1: m
-    dist_to_all_datapoints = sum((X_train - X_test(i, :)).^q, 2);
+    dist_to_all_datapoints = sum((abs(X_train - X_test(i, :))).^q, 2);
     
     [~, k_nearest_idx] = mink(dist_to_all_datapoints, k);
     
