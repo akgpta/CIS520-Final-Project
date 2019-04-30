@@ -115,7 +115,7 @@ Moksh Jawa & Data Cleaning, Data Stitching, Machine Learning Algorithms, Visuali
 \newpage
 
 \section{Abstract}
-Suicide is a major public health concern worldwide. Because living in a different countries and therefore different environment can greatly impact one's lifestyle, we wanted to explore suicide rates over various countries. Specifically, we considered $80$ countries. For each country, we collected the following data: \TODO. We were interested in understanding how these factors could help predict suicide rates. To do this, we implemented $k$-Nearest Neighbors, Linear Regression, and Neural Networks. brief results: \TODO
+Suicide is a major public health concern worldwide. Because living in a different countries and therefore different environment can greatly impact one's lifestyle, we wanted to explore suicide rates over various countries. Specifically, we considered around $80$ countries over the five years from $2010$ to $2014$. For each country, we collected data on ground truth suicide rates, Youth Unemployment, Alcohol Consumption, Life Expectancy, Country Population, and Fertility Rate. We were interested in understanding how these factors could help predict suicide rates. To do this, we implemented $k$-Nearest Neighbors, Linear Regression, and Neural Networks. Results can be best summarized as the data fully characterize the problem. What we mean is that the countries seem to have an endogenous suicide rate, but that is determined outside of our input features. However, our features are complex enough to identify countries with this information and map it to the suicide rates. This gives an essentially overfit model which actually performs well due to high time correlation of suicide rates per country through time. 
 
 \begin{multicols}{2}
 \section{Introduction}
@@ -166,26 +166,34 @@ Moreover, most papers perform a time series analysis. We provide a different app
 
 
 \section{Solution Methods and Algorithms}
-\subsection{Algorithms Used} We implemented a variety of models to help predict suicide rates by country. \TODO (idk if need general overview - but probably delete later)
 
-\subsection{$k$ Nearest-Neighbors} 
+\subsection{$k$ Nearest-Neighbors} We first implemented a $k$-nearest neighbor algorithm using Euclidean distance as we suspected that suicide rates between similar countries would be comparable. 
 
-- good stepping stone
+- good stepping stone,  thought first would be good to compare countries to other countries
 
-- thought first would be good to compare countries to other countries
+- With Euclidean distance, we found $k=1$ was the best
 
-- 
+- Also tried Minkowski's distance, a more general distance formula
 
-We first started with nearest neighbors and found through cross validation that 1-nearest neighbors worked the best. We also tried using Minkowski’s distance and similarly found that 1-nearest neighbors using Euclidean distance produced the best model. 
-From these results, we began to suspect that nearest neighbors may just be memorizing the countries previous suicide history. Indeed when we looked further into the data, we realized that the countries were too distinct, causing the countries to be most similar to themselves. 
+\[D\left(\mathbf{x}_{i}, \mathbf{x}_{j}\right)=\left(\sum_{l=1}^{d}\left|x_{i l}-x_{j l}\right|^{1 / p}\right)^{p}\]
 
-\subsection{Neural Network} When we ran neural net with 1 hidden layer, we saw that our model only got better as the model’s complexity increased, further showing that our model was essentially grossly overfitting to the train data and essentially functioning as a memorizer. 
+- similarly found k = 1, p = 2 (eucledian distance) produced best model
+
+\subsection{Neural Network} Ran neural net on $1$ hidden network...
+
 \subsection{Linear Regression} As most related papers ran linear regression, we also ran regularized and unregularized least squares linear regression to see if perhaps we could prevent this overfitting. Ehhhhh
 
 \section{Experimental Design and Results}
 \subsection{Experiments} \TODO Describe how you set up your experiments, including choice
-of training/testing data, choice of parameters, etc, in a way that your results can be reproduced \TODO
+of training/testing data, choice of parameters, etc, in a way that your results can be reproduced \TODO 
+- cross validation set up
+- training/testing data
+
 \subsection{Results}
+From these results, we began to suspect that nearest neighbors may just be memorizing the countries previous suicide history. Indeed when we looked further into the data, we realized that the countries were too distinct, causing the countries to be most similar to themselves. 
+
+When we ran neural net with 1 hidden layer, we saw that our model only got better as the model’s complexity increased, further showing that our model was essentially grossly overfitting to the train data and essentially functioning as a memorizer. 
+
 \TODO training/testing times, possible visualizations of results including both examples of good
 performance and examples of what types of errors are made, etc. \TODO
 
