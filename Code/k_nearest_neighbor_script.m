@@ -2,7 +2,7 @@ get_data
 
 d = size(X_10, 2);
 
-k_values = [1,2,3,4,5,6,10]; 
+k_values = [1,2,3,4,5,6,7,8,9,10]; 
 q_values = [1,2,3,4,5]; 
 
 err_nn = zeros(3, size(k_values,2)); 
@@ -78,6 +78,21 @@ title('k-Nearest Neighbors Using Minkowski Distance Formula')
 xlabel('Value of q') 
 ylabel('Square Error') 
 legend({'Cross Validation Error', 'Training Error','Test Error'})
+
+figure
+plot(k_values, err_cv_min(:,1)','-')
+hold on; 
+plot(k_values, err_cv_min(:,2)','-')
+hold on; 
+plot(k_values, err_cv_min(:,3)','-')
+hold on; 
+plot(k_values, err_cv_min(:,4)','-')
+hold on; 
+plot(k_values, err_cv_min(:,4)','-')
+xlabel('Value of k') 
+ylabel('Square Error') 
+legend({'q=1', 'q=2', 'q=3', 'q=4', 'q=4'})
+title('Cross Validation Error for k-Nearest Neighbors Using Minkowski Distance Formula for Different Values of q')
 
 %{
 A = [1, 2, 5, 10]; 
