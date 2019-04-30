@@ -25,3 +25,7 @@ macro:->https://crawford.anu.edu.au/acde/asarc/pdf/papers/2009/WP2009/{\_}08.pdf
 \@doanenote {9}
 macro:->https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2872355/
 \@endanenote 
+\@doanenote {10}
+macro:->https://blog.algorithmia.com/introduction-to-loss-functions/\textbf
+{}
+\@endanenote 

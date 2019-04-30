@@ -106,7 +106,7 @@ Moksh Jawa & Data Cleaning, Data Stitching, Machine Learning Algorithms, Visuali
 
 \textbf{Code Submission:}
 
-\normalsize{Public GitHub Repo can be found at\href{https://github.com/akgpta/CIS520-Final-Project}{https://github.com/akgpta/CIS520-Final-Project}}
+\normalsize{Public GitHub Repo can be found at \href{https://github.com/akgpta/CIS520-Final-Project}{https://github.com/akgpta/CIS520-Final-Project}}
 
 
 
@@ -115,7 +115,7 @@ Moksh Jawa & Data Cleaning, Data Stitching, Machine Learning Algorithms, Visuali
 \newpage
 
 \section{Abstract}
-Suicide is a major public health concern worldwide and varies from country to country. Because living in a different country and environment can greatly impact one's lifestyle, we were interested in collecting national data that could impact one's life over several years to better understand suicide rates internationally. With this data, we were interested in finding what factors could be possiblely linked to certain suicide rate trends. To do this, we ran $k$-nearest neighbors, linear regression, and neural networks on the data... \TODO
+Suicide is a major public health concern worldwide. Because living in a different countries and therefore different environment can greatly impact one's lifestyle, we wanted to explore suicide rates over various countries. Specifically, we considered $80$ countries. For each country, we collected the following data: \TODO. We were interested in understanding how these factors could help predict suicide rates. To do this, we implemented $k$-Nearest Neighbors, Linear Regression, and Neural Networks. brief results: \TODO
 
 \begin{multicols}{2}
 \section{Introduction}
@@ -159,21 +159,31 @@ Moreover, most papers perform a time series analysis. We provide a different app
 
 
 \section{Problem Formulation and Data} 
-\subsection{Data Processing Needed} Our data came in a variety of comma-separated formats. A lot of countries were labelled in differing manner and years were often a column and other times a point in a row. We used Excel Pivot Tables to make these more easily parsable and standardized. Later, blanks and other issues with inconsistencies are removed with Python to get an aggregated set of data. Other pre-processing includes removing blanks, reconciling some country names such as (Trinidad \& Tobago vs. Trinidad and Tobago).
-\TODO : talk about cleaning (Pandas, Excel)
-\subsection{Inputs, Outputs} Inputs are a variety of real-valued data points tied to the country. They are described above, but it remains to see which we might have to throw out due to excessive blanks. Most are also measured for a specific year, however some are just duplicated across all years (e.g. Alcohol Consumption). Outputs are a model, which given a countries characteristic features, can predict suicide rates. We have suicide rates by gender (as well as age demographics), so we may also seek a model which predicts a rate for male suicides and a rate for female suicides.
-\subsection{Performance Measures} \TODO update to be what we acutally used
-Given the regression nature of this problem, we believe a squared loss model is appropriate. 
-\TODO: address her comments
+\subsection{Data Processing Needed} Our data came in a variety of comma-separated formats. A lot of countries were labelled in differing manner and years were often a column and other times a point in a row. We used Excel Pivot Tables to make the CSVs more easily parsable and standardized. Later, we used Pandas and Python to remove blanks and other issues with inconsistencies and finish with an aggregated set of data. Other pre-processing includes filling in missing values, reconciling some country names such as (Trinidad \& Tobago vs. Trinidad and Tobago), and dropping some values if a country was not universal across all CSVs. Our final product was a single CSV with 78 rows (countries) with columns for each of the 8 features. The relatively small number of countries is a testament to the variance in countries in each dataset as well as the missing values.
+\subsection{Inputs, Outputs} Inputs are a variety of real-valued data points tied to the country. They are described above. Most are also measured for a specific year, however some are just duplicated across all years (e.g. Alcohol Consumption). Such data points were simply treated as constant for a country through time. We threw out examples which were missing features our true values. Outputs are a model, which given a countries characteristic features, can predict suicide rates. 
+\subsection{Performance Measures} Given the regression nature of this problem, we used squared loss model to measure our performance. This is because with positive real valued data with explicit bounds of $[0, 10^5]$, but more reasonable empirical bounds of around $[0, 10^3]$. The following image is a representation of squared loss,but in a one dimensional feature space \endnote{https://blog.algorithmia.com/introduction-to-loss-functions/\textbf{}}. 
+\includegraphics[width=\columnwidth]{squared-loss.png}
+
 
 \section{Solution Methods and Algorithms}
-\TODO : update to what we actually did - why we choose, how they were implemented, what languages 
-\TODO : THIS WHOLE SECTION NEEDS TO BE REWRITTEN FOR WHAT WE ACTUALLY DID \TODO
-\subsection{Algorithms Used} \TODO describe algorithms, implementations, etc.. \TODO We will start with least squares regression in unregularized, $L_1$ regularized, and $L_2$ regularized forms. We are not certain whether any of our features will be overly correlated so the unregularized least squares regression may fail. We also seek to explore Nearest Neighbor methods, but not with vanilla Euclidean distance, but with feature weighted scaling on the distances. Lastly, we will consider using decision stubs as features and feeding the transformed input space into another learning model, perhaps Neural Nets.
+\subsection{Algorithms Used} We implemented a variety of models to help predict suicide rates by country. \TODO (idk if need general overview - but probably delete later)
+
+\subsection{$k$ Nearest-Neighbors} 
+
+- good stepping stone
+
+- thought first would be good to compare countries to other countries
+
+- 
+
+We first started with nearest neighbors and found through cross validation that 1-nearest neighbors worked the best. We also tried using Minkowski’s distance and similarly found that 1-nearest neighbors using Euclidean distance produced the best model. 
+From these results, we began to suspect that nearest neighbors may just be memorizing the countries previous suicide history. Indeed when we looked further into the data, we realized that the countries were too distinct, causing the countries to be most similar to themselves. 
+
+\subsection{Neural Network} When we ran neural net with 1 hidden layer, we saw that our model only got better as the model’s complexity increased, further showing that our model was essentially grossly overfitting to the train data and essentially functioning as a memorizer. 
+\subsection{Linear Regression} As most related papers ran linear regression, we also ran regularized and unregularized least squares linear regression to see if perhaps we could prevent this overfitting. Ehhhhh
 
 \section{Experimental Design and Results}
-\subsection{Experiments}
-\TODO Describe how you set up your experiments, including choice
+\subsection{Experiments} \TODO Describe how you set up your experiments, including choice
 of training/testing data, choice of parameters, etc, in a way that your results can be reproduced \TODO
 \subsection{Results}
 \TODO training/testing times, possible visualizations of results including both examples of good
@@ -183,11 +193,12 @@ performance and examples of what types of errors are made, etc. \TODO
 The best predictor of suicide rates is the country label itself. Suicide rates in Ghana in 2013 are going to look like suicide rates in Ghana in 2012 most. Modelling this regression outcome as independent draws disregards the time series data and correlation of examples. As such, nearest neighbors performs exceptionally well, since it just recognized the country through these 8 input features. 
 
 \section{Discussion and Reflections}
-\TODO : Discussion about any sort of data specific things we gleaned, I already did the meta analysis. Could add what data we could have analyzed to perhaps get better results (ex. take data from a specific country, get data more closely related to suicide (number of calls to hotline, social media)) \TODO
-\subsection{Takeaways}
+
+We see a lot of what would canonically be overfitting in the data. However, in the context of this problem overfitting is not necessarily the worst. We have such complete data that we can actually begin to drive at the underlying distribution at a per instance level. Note, when we say instance here we are referring to a unique country (not a specific $R^8$ vector in the input space). This means our classifiers actually easily approach a Bayes Optimal Classifier. \\
+We recall the handwriting recognition problem from class. Consider fitting a unique model to an individual with fairly comprehensive handwriting samples. Handwriting for an individual evolves very minimally over time and there really are only 26 letters. Overfitting and understanding what exactly these 26 letters look like in some sort of training set for the individual means that predictions of future handwriting \textit{for that individual} will be fairly reliable. \\
 This project was certainly an adventure in machine learning. Let us recall some of the lines from what we set out to do. Note, these were established a priori in our proposal: \textit{``at a high-level we wanted to draw out any meaningful relationship between these macro features and suicide rates'}' and \textit{``we hope to gain insight on the
 relative role each factor plays in suicide and about the interaction of these factors''}. We were thinking that a model would illimuniate which features wre coupled with suicide rates. As the project continued though, as noted in our Results section, models were essentially using the features to identify individual countries. We are careful in this report to not conflate correlation with causation and, as such, have left out implications of this country-recognizer model built. \\
-Reflecting on our goal, it seems the problem we have chosen to tackle doesn't really make sense from a machine learning perspective. Sure, the factors we have chosen can be used to generate a model which fairly reliably outputs suicide rates. However, this correlation should not be taken to imply causation or even anything close to that. From a model story perspective, suicide rates are affected by many factors exogenous to our world of data. \\
+Reflecting on our goal, it seems the problem we have chosen to tackle doesn't really make sense from a machine learning perspective. Sure, the factors we have chosen can be used to generate a model which fairly reliably outputs suicide rates. However, this correlation should not be taken to imply causation or even anything close to that. From a model story perspective, suicide rates are affected by many factors exogenous to our world of data but endogenous to a country. \\
 When you consider some sort of underlying sampling distribution assumptions on the data, it doesn't make sense that suicide rates for countries on different continents with different socioeconomic statuses are coming from one distribution. Although this seems to say that this project wasn't an effective learning opportunity, we as a team feel quite the opposite. \\
 There are a finite number of countries in the world. In fact, there are 195 countries in the world. As such, worries about reasonable time computation, tractability, and other aspects of problems centered on larger data (think users of Netflix or game states) does not really factor in here. Had we as a group had more experience at the start of this project, perhaps we would have foreseen the uniqueness of countries leading to a model which could basically be a geography bee champion. However, we feel that the machine learning exercises carried out during the course of this project deepened our understanding of course algorithms, implications, and relevant considerations.
 
@@ -202,7 +213,7 @@ There are a finite number of countries in the world. In fact, there are 195 coun
 
 % After our milestone meeting, we will have exactly 3 weeks. The first week will involve implementing our last approach of decision stubs as features and feeding them into neural nets. The second week will involve finetuning and evaluating our models. The last week will be for writing up the report
 
-\section{Acknowledgements} \TODO N/A
+\section{Acknowledgements} First and foremost, we would like to acknowledge our project mentor, Jane Lee, for being very helpful throughout the project and Professor Agarwal for a fantastic class. Additionally, we acknowledge the Kaggle users who provided the datasets.
 
 \end{multicols}
 
