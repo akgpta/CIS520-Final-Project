@@ -92,6 +92,7 @@ plot(k_values, err_cv_min(:,4)','-')
 xlabel('Value of k') 
 ylabel('Square Error') 
 legend({'q=1', 'q=2', 'q=3', 'q=4', 'q=4'})
+title('Cross Validation Error for k-Nearest Neighbors Using Minkowski Distance Formula for Different Values of q')
 
 %{
 A = [1, 2, 5, 10]; 
