@@ -124,7 +124,17 @@ Suicide is a major public health concern worldwide. Because living in a differen
 \begin{multicols}{2}
 \section{Introduction}
 \subsection{Problem Motivation} Unfortunately, it is a sad reality that many individuals each year commit suicide. We in the U.S. are slowly becoming aware of this issue, but we wanted to understand suicide rates internationally. Particularly, we wanted to look at these rates as they related to common features of each country, such as GDP, unemployment, and alcohol consumption. At a high-level, we wanted to draw out any meaningful relationship between these macro features and suicide rates.
-\includegraphics[width=\columnwidth]{2012-data-vis-map.png}
+
+\begingroup
+    %\centering
+    \includegraphics[width=\columnwidth]{2012-data-vis-map.png}
+    \begin{spacing}{1.2}
+    \captionof{figure}{Map Depicting Suicide Rates (per 100,000 population)}\label{fig:map} 
+    \end{spacing}
+\endgroup
+
+%\includegraphics[width=\columnwidth]{2012-data-vis-map.png}
+
 \subsection{Data Set and Source} Our project grew from an intriguing 
 World Health Organization data set with well over 35 years of suicide rates by country broken up by demographics \endnote{https://www.kaggle.com/szamil/who-suicide-statistics}. In an effort to extend existing analyses, we sourced global data from a variety of sources, including a FiveThirtyEight data set on alcohol consumption \endnote{https://www.kaggle.com/fivethirtyeight/fivethirtyeight-alcohol-consumption-dataset}, a World Bank Data Set on Youth Unemployment \endnote{https://www.kaggle.com/sovannt/world-bank-youth-unemployment}, and another from the World Bank on population, fertility, and life expectancy \endnote{https://www.kaggle.com/gemartin/world-bank-data-1960-to-2016}. A lot of the work done was with respect to time series and things like that. What we wanted to do, though, was take a look at combining data from multiple sources. 
 Our project team sought to understand a little bit more about the intricacies of sourcing data from multiple places. This proved to be a difficult challenge.  
@@ -194,17 +204,18 @@ We found that a learning rate of 0.001 and 5000 iterations was more than enough 
 
 \includegraphics[width=\columnwidth]{neur-net.png}
 
-\subsection{Linear Regression} First, we implemented a linear regression as our base line model. 
+\subsection{Linear Regression} First, we implemented a linear regression as our base line model. As most related papers ran linear regression, we also ran regularized and unregularized least squares linear regression to use as a baseline. Additional detail is omitted here for the sake of parsimony. 
 
-As most related papers ran linear regression, we also ran regularized and unregularized least squares linear regression to see if we could prevent this overfitting. This is our base line model \TODO(maybe say excessive details are left out for the sake of parsimony?) \TODO 
-
+\begin{center}
 \includegraphics[width=\columnwidth]{lin_reg.png}
+\end{center}
 
 \subsection{Overall Results}
 
-\TODO not a complete sentence Ended up with memorizers on neural net and nearest neighbors.
+% \includegraphics[scale = .25]{geo-bee.jpg}
+We ended up with memorizers on neural net and nearest neighbors. Meaning that our models would be particularly well suited for something like a geography bee. 
 
-%\includegraphics[width=\columnwidth]{geo-bee.jpg}
+
 The best predictor of suicide rates is the country label itself. Suicide rates in Ghana in 2013 are going to look like suicide rates in Ghana in 2012 most. Modeling this regression outcome as independent draws disregards the time series data and correlation of examples. As such, nearest neighbors performs exceptionally well, since it just recognized the country through these 8 input features. 
 
 \section{Discussion and Reflections}
