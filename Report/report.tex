@@ -185,7 +185,7 @@ To take this a step further, we also built a nearest neighbor model using Minkow
 
 \[D\left(\mathbf{x}_{i}, \mathbf{x}_{j}\right)=\left(\sum_{l=1}^{d}\left|x_{i l}-x_{j l}\right|^{q}\right)^{1/q}\]
 
-We cross-validated across the following values of $q = [1, 2, 3, 4, 5]$ and for each of these $q$ values, found the best $k$ value. Interestingly, we found for each value of $q$, $k = 1$ produced the minimum squared error. Moreover, the same phenomenon of small errors for $k$ values from one to three and relatively larger errors for every subsequent value of $k$ was observed for all values of $q$. Overall, $k = 1$ and $q = 2$ (which is equivalent to Euclidean distance) produced the best model.
+We cross-validated across the following values of $q = [1, 2, 3, 4, 5]$ and for each of these $q$ values, found the best $k$ value. Interestingly, we found for each value of $q$, $k = 1$ produced the minimum squared error. Moreover, the same phenomenon of small errors for $k$ values from one to three and relatively larger errors for every subsequent value of $k$ was observed for all values of $q$, as can be seen in Figure \ref{fig:minkowski_fig}. Overall, $k = 1$ and $q = 2$ (which is equivalent to Euclidean distance) produced the best model.
 
 
 \begingroup
@@ -198,24 +198,28 @@ We cross-validated across the following values of $q = [1, 2, 3, 4, 5]$ and for 
 
 %\includegraphics[width=\columnwidth]{../Figures/k_nn_err_cv_minkowski.jpg}
 
-From these results, we began to suspect that nearest neighbors may just be memorizing the countries suicide history. Indeed when we looked further into the data, we realized that the countries very distinct, causing the countries to be most similar to themselves.
+From these results, we began to suspect that nearest neighbors may be memorizing the countries suicide history. Indeed when we looked further into the data, we realized that the countries very distinct, causing the countries to be most similar to themselves.
 
-From these results, we began to suspect that nearest neighbors may just be memorizing the suicide history of countries. Indeed when we looked further into the data, we realized that the countries are very distinct, causing the countries to be most similar to themselves.
+\subsection{Neural Network} We ran a neural network model with one hidden layer and a single output neuron to try to accurately classify suicide rates. To accurately determine the number of hidden nodes that would produce the best model, we cross validated over the number of nodes: \{1, 5, 10, 15, 25, 50, 100\}. 
 
-\subsection{Neural Network} We ran a neural network model with one hidden layer and a single output neuron to try to accurately classify suicide rates. To accurately determine the number of hidden nodes, we cross validated over the number of nodes: \{1, 5, 10, 15, 25, 50, 100\}. 
+However, we observed that our model performed better and better as the number of nodes increased. This furthers the hypothesis that our data favors a complex model because it a complex model can over fit the data and essentially functions as a memorizer. 
 
-However, we saw that the more nodes we added, the better our train, test, and CV error would become. This furthers the hypothesis that a complex model works better only because it overfits the data and functions as a memorizer. 
-
-We found that a learning rate of 0.001 and 5000 iterations was more than enough to fit the training data. Increasing the learning rate and iterations further only resulted in arithmetic underflow. 
-
+We found that a learning rate of $0.001$ and $5000$ iterations was more than enough to fit the training data. Increasing the learning rate and iterations further only resulted in arithmetic underflow. 
 
 \begingroup
     %\centering
     \includegraphics[width=\columnwidth]{neur-net.png}
     \begin{spacing}{1.2}
-    \captionof{figure}{Neural Net}\label{fig:neural_net_fig} 
+    \captionof{figure}{Classification Error of Neural Network Model: Logistic}\label{fig:neural_net_fig} 
     \end{spacing}
 \endgroup
+
+\subsection{Linear Regression} As our previous models grossly over fit the data, we thought implementing a regularized linear regression may provide us more insight on how to deal with the data. We found that $\lambda = 10^{-2}$ worked the best and gave a cross validation error of $3.607 * 10^5$, training error of $1.431* 10^6$, and test error of $2.524 * 10^5$. The low $\lambda$ value and incredibly high errors suggests that the data did not respond well to regularization. 
+
+
+
+
+However, we quickly realized that this was not the case. In fact, the data doesn't seem well suited to a linear model. This likely stems from the fact that the suicide rates are not particularly correlated with our input features. 
 
 \begingroup
     %\centering
@@ -225,12 +229,10 @@ We found that a learning rate of 0.001 and 5000 iterations was more than enough 
     \end{spacing}
 \endgroup
 
-\subsection{Linear Regression} 
-We thought regularization might help with overfitting, but we quickly saw that this was not the case. The data doesn't seem well suited to a linear model. This likely stems from the fact that the suicide rates are not particularly correlated with our input features. Additional detail is omitted here for the sake of parsimony. 
 
 \subsection{Overall Results}
 
-% \includegraphics[scale = .25]{geo-bee.jpg}
+% \includegraphics[width=\columnwidth]{geo-bee.jpg}
 We ended up with memorizers on neural net and nearest neighbors. Meaning that our models would be particularly well suited for something like a geography bee. 
 
 
