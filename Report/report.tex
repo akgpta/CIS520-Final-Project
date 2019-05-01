@@ -161,8 +161,8 @@ Moreover, most papers perform a time series analysis. We provide a different app
     %\centering
     \includegraphics[width=\columnwidth]{squared-loss.png}
     \begin{spacing}{1.2}
-    \captionof{figure}{Squared Loss Model}\label{fig:squared_model} 
-	\end{spacing}
+    \captionof{figure}{Squared Loss Model}\label{fig:squared_model}
+    \end{spacing}
 \endgroup
 
 
@@ -186,8 +186,6 @@ To take this a step further, we also built a nearest neighbor model using Minkow
 \[D\left(\mathbf{x}_{i}, \mathbf{x}_{j}\right)=\left(\sum_{l=1}^{d}\left|x_{i l}-x_{j l}\right|^{q}\right)^{1/q}\]
 
 We cross-validated across the following values of $q = [1, 2, 3, 4, 5]$ and for each of these $q$ values, found the best $k$ value. Interestingly, we found for each value of $q$, $k = 1$ produced the minimum squared error. Moreover, the same phenomenon of small errors for $k$ values from one to three and relatively larger errors for every subsequent value of $k$ was observed for all values of $q$, as can be seen in Figure \ref{fig:minkowski_fig}. Overall, $k = 1$ and $q = 2$ (which is equivalent to Euclidean distance) produced the best model.
-
-
 %\includegraphics[width=\columnwidth]{../Figures/k_nn_err_cv_minkowski.jpg}
 
 From these results, we began to suspect that nearest neighbors may be memorizing the countries suicide history. Indeed when we looked further into the data, we realized that the countries very distinct, causing the countries to be most similar to themselves.
@@ -196,7 +194,7 @@ From these results, we began to suspect that nearest neighbors may be memorizing
     \includegraphics[width=\columnwidth]{../Figures/k_nn_err_cv_minkowski.jpg}
     \begin{spacing}{1.2}
     \captionof{figure}{Cross Validation Error for k-Nearest Neighbors Using Minkowski Distance. \\{\small Note that $q=2$ refers to a model built off of a Euclidean distance formula.}}\label{fig:minkowski_fig} 
-	\end{spacing}
+    \end{spacing}
 \endgroup
 \subsection{Neural Network} We ran a neural network model with one hidden layer and a single output neuron to try to accurately classify suicide rates. To accurately determine the number of hidden nodes that would produce the best model, we cross validated over the number of nodes: \{1, 5, 10, 15, 25, 50, 100\}. 
 \begingroup
@@ -207,10 +205,10 @@ From these results, we began to suspect that nearest neighbors may be memorizing
 	\end{spacing}
 \endgroup
 
+
 However, we observed that our model performed better and better as the number of nodes increased. This furthers the hypothesis that our data favors a complex model because it a complex model can over fit the data and essentially functions as a memorizer. 
 
 We found that a learning rate of $0.001$ and $5000$ iterations was more than enough to fit the training data. Increasing the learning rate and iterations further only resulted in arithmetic underflow. 
-
 
 \subsection{Linear Regression} As our previous models grossly over fit the data, we thought implementing a regularized linear regression may provide us more insight on how to deal with the data. However, we quickly realized that this was not the case.
 
