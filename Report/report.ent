@@ -28,3 +28,6 @@ macro:->https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2872355/
 \@doanenote {10}
 macro:->https://blog.algorithmia.com/introduction-to-loss-functions/.
 \@endanenote 
+\@doanenote {11}
+macro:->https://www.projectguru.in/publications/auto-regressive-distributed-lag-model-ardl/
+\@endanenote 

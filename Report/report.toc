@@ -16,6 +16,7 @@
 \contentsline {subsection}{\numberline {5.4}Linear Regression}{6}{subsection.5.4}
 \contentsline {subsection}{\numberline {5.5}Overall Results}{6}{subsection.5.5}
 \contentsline {section}{\numberline {6}Discussion and Reflections}{6}{section.6}
-\contentsline {section}{\numberline {7}Acknowledgements}{7}{section.7}
-\contentsline {section}{\numberline {8}References}{8}{section.8}
-\contentsline {section}{\numberline {9}Appendix}{8}{section.9}
+\contentsline {section}{\numberline {7}Next Steps}{7}{section.7}
+\contentsline {section}{\numberline {8}Acknowledgements}{7}{section.8}
+\contentsline {section}{\numberline {9}References}{8}{section.9}
+\contentsline {section}{\numberline {10}Appendix}{8}{section.10}
