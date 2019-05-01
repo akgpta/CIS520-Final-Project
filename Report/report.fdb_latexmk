@@ -1,6 +1,11 @@
 # Fdb version 3
+<<<<<<< HEAD
 ["pdflatex"] 1556675760 "report.tex" "report.pdf" "report" 1556675761
   "../Figures/k_nn_err_cv_minkowski.jpg" 1556666174 57726 2773b890642190363d16f5fd438258d8 ""
+=======
+["pdflatex"] 1556674853 "report.tex" "report.pdf" "report" 1556674854
+  "../Figures/k_nn_err_cv_minkowski.jpg" 1556666025 57726 2773b890642190363d16f5fd438258d8 ""
+>>>>>>> 2dbd03c6eec0eed17e4436b09d3401cbec9e6aae
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1480098696 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
@@ -171,6 +176,7 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
+<<<<<<< HEAD
   "2012-data-vis-map.png" 1556487007 233803 a39bcc816d50aaa7c3f9d9830ef032af ""
   "lin_reg.png" 1556666174 67917 73a18ed910c29e0fb91c9475782b17af ""
   "neur-net.png" 1556642720 57845 e57363c8dc4c81383cd1af3fb4c7f775 ""
@@ -182,6 +188,23 @@
   "squared-loss.png" 1556641464 97733 dfaf3316f759427f43f895a3352f90f1 ""
   (generated)
   "report.aux"
+=======
+  "2012-data-vis-map.png" 1556505490 233803 a39bcc816d50aaa7c3f9d9830ef032af ""
+  "lin_reg.png" 1556645581 67917 73a18ed910c29e0fb91c9475782b17af ""
+  "neur-net.png" 1556645581 57845 e57363c8dc4c81383cd1af3fb4c7f775 ""
+  "report.aux" 1556674854 4145 b1ad465ec0d59684868e01539624d7d4 ""
+  "report.ent" 1556674854 1058 39938b4cfbfad114f39860e7cd3baff0 ""
+  "report.out" 1556674854 1334 869d013820bd80dfa83a5cc9c9608938 ""
+  "report.tex" 1556674852 24035 37d0d823323cfc4ae85203c0469a2cce ""
+  "report.toc" 1556674854 1709 80ab72322890da10aa6dab8e453b738d ""
+  "squared-loss.png" 1556642213 97733 dfaf3316f759427f43f895a3352f90f1 ""
+  (generated)
+  "report.ent"
+  "2012-data-vis-map.png"
+  "report.out"
+  "report.pdf"
+  "report.log"
+>>>>>>> 2dbd03c6eec0eed17e4436b09d3401cbec9e6aae
   "geo-bee.jpg"
   "report.out"
   "report.pdf"
@@ -191,5 +214,13 @@
   "report.toc"
   "report.log"
   "squared-loss.png"
+<<<<<<< HEAD
   "report.ent"
   "neur-net.png"
+=======
+  "report.tex"
+  "neur-net.png"
+  "lin_reg.png"
+  "report.aux"
+  "report.toc"
+>>>>>>> 2dbd03c6eec0eed17e4436b09d3401cbec9e6aae

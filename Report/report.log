@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  30 APR 2019 21:56
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  30 APR 2019 21:40
+>>>>>>> 2dbd03c6eec0eed17e4436b09d3401cbec9e6aae
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -693,6 +697,12 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/capt-of/capt-of.sty
 Package: capt-of 2009/12/29 v0.2 standard captions outside of floats
 )
+<<<<<<< HEAD
+=======
+(/usr/local/texlive/2018/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+>>>>>>> 2dbd03c6eec0eed17e4436b09d3401cbec9e6aae
 Package hyperref Info: Option `colorlinks' set `true' on input line 23.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/titlesec/titlesec.sty
@@ -897,7 +907,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 299.
 Here is how much of TeX's memory you used:
  18065 strings out of 492649
  328147 string characters out of 6129622
+<<<<<<< HEAD
  513537 words of memory out of 5000000
+=======
+ 513410 words of memory out of 5000000
+>>>>>>> 2dbd03c6eec0eed17e4436b09d3401cbec9e6aae
  21568 multiletter control sequences out of 15000+600000
  14582 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -921,7 +935,11 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2018/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+<<<<<<< HEAD
 Output written on report.pdf (9 pages, 656569 bytes).
+=======
+Output written on report.pdf (9 pages, 656549 bytes).
+>>>>>>> 2dbd03c6eec0eed17e4436b09d3401cbec9e6aae
 PDF statistics:
  261 PDF objects out of 1000 (max. 8388607)
  219 compressed objects within 3 object streams
