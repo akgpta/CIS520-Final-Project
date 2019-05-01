@@ -15,13 +15,17 @@
 \usepackage{endnotes}
 % \usepackage{dblfnote}
 \usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{float}
+\usepackage{capt-of}
 \hypersetup{colorlinks=true,urlcolor=blue}
 
 \renewcommand{\baselinestretch}{1.3}
 \pagestyle{fancy}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
-\setlength{\headheight}{0pt}
+\setlength{\headheight}{12pt}
 
 \fancypagestyle{firstpage}{
   \fancyhead{}
@@ -55,7 +59,7 @@
 \vspace{12pt}
 
 %Fill in your project title
-\textbf{\Large{Project Title}}
+\textbf{\Large{Modeling Suicide Rates at the Country Level}}
 
 \vspace{1cm}
 
@@ -119,35 +123,18 @@ Suicide is a major public health concern worldwide. Because living in a differen
 
 \begin{multicols}{2}
 \section{Introduction}
-\subsection{Problem Motivation} Unfortunately, it is a sad reality that many individuals each year commit suicide. We in the U.S. are slowly being aware of this issue, but we wanted to understand suicide rates internationally. Especially, we wanted to look at these rates as they related to common features of each country, such as GDP, unemployment, and alcohol consumption. At a high-level we wanted to draw out any meaningful relationship between these macro features and suicide rates.
+\subsection{Problem Motivation} Unfortunately, it is a sad reality that many individuals each year commit suicide. We in the U.S. are slowly becoming aware of this issue, but we wanted to understand suicide rates internationally. Particularly, we wanted to look at these rates as they related to common features of each country, such as GDP, unemployment, and alcohol consumption. At a high-level, we wanted to draw out any meaningful relationship between these macro features and suicide rates.
 \includegraphics[width=\columnwidth]{2012-data-vis-map.png}
 \subsection{Data Set and Source} Our project grew from an intriguing 
-World Health Organization data set will well over 35 years of suicide rates by country broken up by demographics.  \endnote{https://www.kaggle.com/szamil/who-suicide-statistics}. In an effort to extend existing analyses though, we actually sources global data from a variety of sources. This included a FiveThirtyEight data set on alcohol consumptixon \endnote{https://www.kaggle.com/fivethirtyeight/fivethirtyeight-alcohol-consumption-dataset}. We also incorporated a World Bank Data Set on Youth Unemployment \endnote{https://www.kaggle.com/sovannt/world-bank-youth-unemployment} and another from the World Bank on population, fertility, and life expectancy \endnote{https://www.kaggle.com/gemartin/world-bank-data-1960-to-2016}. A lot of the work done was with respect to time series and things like that. What we wanted to do, though, was take a look at combining data from multiple sources. 
+World Health Organization data set with well over 35 years of suicide rates by country broken up by demographics \endnote{https://www.kaggle.com/szamil/who-suicide-statistics}. In an effort to extend existing analyses, we sourced global data from a variety of sources, including a FiveThirtyEight data set on alcohol consumption \endnote{https://www.kaggle.com/fivethirtyeight/fivethirtyeight-alcohol-consumption-dataset}, a World Bank Data Set on Youth Unemployment \endnote{https://www.kaggle.com/sovannt/world-bank-youth-unemployment}, and another from the World Bank on population, fertility, and life expectancy \endnote{https://www.kaggle.com/gemartin/world-bank-data-1960-to-2016}. A lot of the work done was with respect to time series and things like that. What we wanted to do, though, was take a look at combining data from multiple sources. 
 Our project team sought to understand a little bit more about the intricacies of sourcing data from multiple places. This proved to be a difficult challenge.  
-\subsection{Summary Statistics} 
-We've provided summary statistics for 4 of the datasets we will be using in our project shown in Tables \hyperref[summary-statistic-table-alcohol]{0}, \ref{summary-statistic-table-youth-unemployment}, \ref{summary-statistic-table-fertility}, \ref{summary-statistic-table-life}, some of which are located in the appendix.
-
-\begin{adjustwidth}{8px}{}
-\begin{tabular}{|l|l|}
-\hline
-Statistic          & Average liters/person/year \\ \hline
-Min                & 0                          \\ \hline
-Max                & 14.4                       \\ \hline
-Mean               & 4.71                       \\ \hline
-Median             & 4.2                        \\ \hline
-Standard Deviation & 3.77                       \\ \hline
-\multicolumn{2}{c}{Table 0: Alcohol Consumption by Country} 
-\label{summary-statistic-table-alcohol}
-\end{tabular}
-\end{adjustwidth}
-
 
 \section{Related Work}
 \subsection{Related to Models} 
 
-Among the papers that analzyed economic factors, a regression model seemed to be the popular choice of method. For example, Pandey and Kaur paper used a Auto-Regressive Distributed Lag (ARDL) model \endnote{https://crawford.anu.edu.au/acde/asarc/pdf/papers/2009/WP2009/{\_}08.pdf}. 
+Among the papers that analzyed economic factors, a regression model seemed to be the popular choice. For example, a Pandey and Kaur paper used a Auto-Regressive Distributed Lag (ARDL) model \endnote{https://crawford.anu.edu.au/acde/asarc/pdf/papers/2009/WP2009/{\_}08.pdf}. 
 
-Most of the articles concerning the relationship of suicide rate and alcohol consumption related trends from a biological perspective utilized relatively simple statistical analysis \endnote{https://www.ncbi.nlm.nih.gov/pubmed/9229027}. Whereas medical research that involved more complex forms of data such as fMRI brain scans utilized algorithms such as Gaussian Naive Bayes \endnote{https://nocklab.fas.harvard.edu/files/nocklab/files/just{\_}2017{\_}machlearn{\_}suicide{\_}emotion{\_}youth.pdf}.
+Most articles concerning the relationship betweem suicide rate and alcohol consumption related trends from a biological perspective utilized relatively simple statistical analysis \endnote{https://www.ncbi.nlm.nih.gov/pubmed/9229027}. On the other hand, medical research that involved more complex data such as fMRI brain scans utilized algorithms such as Gaussian Naive Bayes \endnote{https://nocklab.fas.harvard.edu/files/nocklab/files/just{\_}2017{\_}machlearn{\_}suicide{\_}emotion{\_}youth.pdf}.
 
 \subsection{Related to Problem} 
 
@@ -168,11 +155,16 @@ Moreover, most papers perform a time series analysis. We provide a different app
 \section{Methods and Results}
 \subsection{Experiment Set Up} Altogether, we had five years worth of data on $78$ countries. We maintained the same training data, test data, and folds when implementing all three types of models. The data from 2014 data was reserved as the test data and we trained our models on the data from $2010$ to $2013$. Four folds were set up that such that each one reserved a different year from the $2010$ to $2013$ data to test with. 
 
-\subsection{k Nearest-Neighbors} We first implemented a $k$-nearest neighbor algorithm using Euclidean distance as we suspected suicide rates between similar countries would be comparable. We cross validated across the following values of $k = [1,2, 3, 4, 5, 6, 7, 8, 9, 10]$ and found that $k = 1$ produced the best model with a cross validation squared error of $4.697 * 10^4$, training error of $8.160 * 10^6$ and test error of $1.720 * 10^6$. Although this error appears to be high, we remind the reader that this squared error is taken over $78$ test data points and each of the suicide rate values can be as large as $10000$. 
+\subsection{k Nearest-Neighbors} We first implemented a $k$-nearest neighbor algorithm using Euclidean distance as we suspected suicide rates between similar countries would be comparable. We cross validated across the following values of $k = [1,2, 3, 4, 5, 6, 7, 8, 9, 10]$ and found that $k = 1$ produced the best model with a cross validation squared error of $4.697 * 10^4$, training error of $8.160 * 10^6$ and test error of $1.720 * 10^6$. Although this error appears to be high, we remind the reader that this squared error is taken over $78$ test data points per fold and each of the suicide rate values can be as large as $10000$. In fact, if you average this cross validation error over these points and square root you get an average error of $\sqrt{\frac{4.697 * 10^4}{78}} \approx 24.5 $ on each sample. 
 
-The graph below shows the results when cross-validating over different $k$ values. Here we have omitted the training and test error to highlight an interesting trend in cross-validation error. Recall that our each of our folds have data of from each country of $3$ years. Say we are looking for the nearest neighbors for country $x$. We suspect that the error is very low for $k$ values of $1, 2, 3$ because the model is utilizing the country $x$'s $3$ data points from different years to predict suicide rates for the test year. Errors then pick up for values of $k$ greater than $3$ because the model is forced to use the data from countries other than country $x$, which may not be as informative when making decision about suicide rates for country $x$. 
-
-\includegraphics[width=\columnwidth]{../Figures/k_nn_cv_err.jpg}
+Figure \ref{fig:a} below shows the results when cross-validating over different $k$ values. Here we have omitted the training and test error to highlight an interesting trend in cross-validation error. Recall that our each of our folds have data of from each country of $3$ years. Say we are looking for the nearest neighbors for country $x$. We suspect that the error is very low for $k$ values of $1, 2, 3$ because the model is utilizing the country $x$'s $3$ data points from different years to predict suicide rates for the test year. Errors then pick up for values of $k$ greater than $3$ because the model is forced to use the data from countries other than country $x$, which may not be as informative when making decision about suicide rates for country $x$. 
+{}
+%\begingroup
+    %{\centering
+    %\includegraphics[width=\columnwidth]{../Figures/k_nn_cv_err.jpg}
+    %\captionof{figure}{Cross Validation Error for k-Nearest Neighbors Using Minkowski Distance. {\small Note that $q=2$ refers to a model built off of a Euclidean distance formula.}} \label{fig:a}}
+%\endgroup
+%\includegraphics[width=\columnwidth]{../Figures/k_nn_cv_err.jpg}
 
 To take this a step further, we also built a near neighbor model using Minkowski's distance, a more general distance formula, shown below.
 
@@ -180,9 +172,21 @@ To take this a step further, we also built a near neighbor model using Minkowski
 
 We cross validated across the following values of $q = [1, 2, 3, 4, 5]$ and for each of these $q$ values, found the best $k$ value. Interestingly, we found for each value of $q$, $k = 1$ produced the minimum squared error. Moreover, the same phenomenon of small errors for $k$ values from one to tree and relatively larger errors for every subsequent value of $k$ was observed for all values of $q$. Overall, $k = 1$ and $q = 2$ (which is equivalent to Euclidean distance) produced the best model.
 
-\includegraphics[width=\columnwidth]{../Figures/k_nn_err_cv_minkowski.jpg}
+\begingroup
+    \centering
+    \includegraphics[width=\columnwidth]{../Figures/k_nn_err_cv_minkowski.jpg}
+    \captionof{figure}{Cross Validation Error for k-Nearest Neighbors Using Minkowski Distance.} {\small Note that $q=2$ refers to a model built off of a Euclidean distance formula.} \label{fig:a}
+\endgroup
+
+%\includegraphics[width=\columnwidth]{../Figures/k_nn_err_cv_minkowski.jpg}
+
+From these results, we began to suspect that nearest neighbors may just be memorizing the countries suicide history. Indeed when we looked further into the data, we realized that the countries very distinct, causing the countries to be most similar to themselves.
 
 \subsection{Neural Network} \TODO(Aashish) Ran neural net on $1$ hidden network...
+
+When we ran neural net with 1 hidden layer, we saw that our model only got better as the model’s complexity increased, further showing that our model was essentially grossly overfitting to the train data and essentially functioning as a memorizer.
+
+\includegraphics[width=\columnwidth]{neur-net.png}
 
 \subsection{Linear Regression} First, we implemented a linear regression as our base line model. 
 
@@ -191,10 +195,9 @@ A most related papers ran linear regression, we also ran regularized and unregul
 
 \includegraphics[width=\columnwidth]{lin_reg.png}
 
-\subsection{Results}
+\subsection{Overall Results}
 
-When we ran neural net with 1 hidden layer, we saw that our model only got better as the model’s complexity increased, further showing that our model was essentially grossly overfitting to the train data and essentially functioning as a memorizer.
-\includegraphics[width=\columnwidth]{neur-net.png}
+Ended up with memorizers on neural net and nearest neighbors.
 
 \includegraphics[width=\columnwidth]{geo-bee.jpg}
 The best predictor of suicide rates is the country label itself. Suicide rates in Ghana in 2013 are going to look like suicide rates in Ghana in 2012 most. Modelling this regression outcome as independent draws disregards the time series data and correlation of examples. As such, nearest neighbors performs exceptionally well, since it just recognized the country through these 8 input features. 
@@ -228,7 +231,26 @@ There are a finite number of countries in the world. In fact, there are 195 coun
 
 \section{References} \theendnotes
 
-\section{Appendix} 
+\section{Appendix}
+
+Dataset Summary Statistics:
+
+\begin{adjustwidth}{8px}{}
+\centering
+\begin{tabular}{|l|l|}
+\hline
+Statistic          & Average liters/person/year \\ \hline
+Min                & 0                          \\ \hline
+Max                & 14.4                       \\ \hline
+Mean               & 4.71                       \\ \hline
+Median             & 4.2                        \\ \hline
+Standard Deviation & 3.77                       \\ \hline
+\multicolumn{2}{c}{Table 0: Alcohol Consumption by Country} 
+\label{summary-statistic-table-alcohol}
+\end{tabular}
+\end{adjustwidth}
+
+
 \begin{table}[ht]
 \centering
 \begin{tabular}{|l|l|l|l|l|l|}

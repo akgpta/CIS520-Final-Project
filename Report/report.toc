@@ -2,20 +2,19 @@
 \contentsline {section}{\numberline {2}Introduction}{3}{section.2}
 \contentsline {subsection}{\numberline {2.1}Problem Motivation}{3}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Data Set and Source}{3}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Summary Statistics}{3}{subsection.2.3}
 \contentsline {section}{\numberline {3}Related Work}{3}{section.3}
 \contentsline {subsection}{\numberline {3.1}Related to Models}{3}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Related to Problem}{4}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.2}Related to Problem}{3}{subsection.3.2}
 \contentsline {section}{\numberline {4}Problem Formulation and Data}{4}{section.4}
 \contentsline {subsection}{\numberline {4.1}Data Processing Needed}{4}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Inputs, Outputs}{4}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Performance Measures}{4}{subsection.4.3}
 \contentsline {section}{\numberline {5}Methods and Results}{4}{section.5}
 \contentsline {subsection}{\numberline {5.1}Experiment Set Up}{4}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}k Nearest-Neighbors}{5}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.2}k Nearest-Neighbors}{4}{subsection.5.2}
 \contentsline {subsection}{\numberline {5.3}Neural Network}{5}{subsection.5.3}
 \contentsline {subsection}{\numberline {5.4}Linear Regression}{5}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}Results}{6}{subsection.5.5}
+\contentsline {subsection}{\numberline {5.5}Overall Results}{6}{subsection.5.5}
 \contentsline {section}{\numberline {6}Discussion and Reflections}{6}{section.6}
 \contentsline {section}{\numberline {7}Acknowledgements}{7}{section.7}
 \contentsline {section}{\numberline {8}References}{8}{section.8}

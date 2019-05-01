@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  30 APR 2019 19:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  30 APR 2019 21:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -675,16 +675,31 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip61
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 18.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count151
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count152
+\float@exts=\toks43
+\float@box=\box72
+\@float@everytoks=\toks44
+\@floatcapt=\box73
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/capt-of/capt-of.sty
+Package: capt-of 2009/12/29 v0.2 standard captions outside of floats
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 22.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
-\ttl@box=\box72
+\ttl@box=\box74
 \beforetitleunit=\skip62
 \aftertitleunit=\skip63
 \ttl@plus=\dimen198
 \ttl@minus=\dimen199
-\ttl@toksa=\toks43
+\ttl@toksa=\toks45
 \titlewidth=\dimen256
 \titlewidthlast=\dimen257
 \titlewidthfirst=\dimen258
@@ -692,20 +707,20 @@ Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -724,7 +739,7 @@ LaTeX Font Info:    ... okay on input line 41.
 * \oddsidemargin=-36.135pt
 * \evensidemargin=-36.135pt
 * \topmargin=-36.135pt
-* \headheight=0.0pt
+* \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
 * \footskip=30.0pt
@@ -743,17 +758,17 @@ LaTeX Font Info:    ... okay on input line 41.
 
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count151
+\scratchcounter=\count153
 \scratchdimen=\dimen259
-\scratchbox=\box73
-\nofMPsegments=\count152
-\nofMParguments=\count153
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count154
+\scratchbox=\box75
+\nofMPsegments=\count154
+\nofMParguments=\count155
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count156
 \MPscratchDim=\dimen260
-\MPnumerator=\count155
-\makeMPintoPDFobject=\count156
-\everyMPtoPDFconversion=\toks45
+\MPnumerator=\count157
+\makeMPintoPDFobject=\count158
+\everyMPtoPDFconversion=\toks47
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -772,8 +787,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box74
-Package hyperref Info: Link coloring ON on input line 41.
+\AtBeginShipoutBox=\box76
+Package hyperref Info: Link coloring ON on input line 45.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -781,140 +796,137 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count157
+\c@section@level=\count159
 )
-LaTeX Info: Redefining \ref on input line 41.
-LaTeX Info: Redefining \pageref on input line 41.
-LaTeX Info: Redefining \nameref on input line 41.
+LaTeX Info: Redefining \ref on input line 45.
+LaTeX Info: Redefining \pageref on input line 45.
+LaTeX Info: Redefining \nameref on input line 45.
 
 (./report.out) (./report.out)
 \@outlinefile=\write5
 \openout5 = `report.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 86.
+LaTeX Font Info:    Try loading font information for U+msa on input line 90.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 86.
+LaTeX Font Info:    Try loading font information for U+msb on input line 90.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+) [1
 
-Package Fancyhdr Warning: \headheight is too small (0.0pt): 
- Make it at least 12.0pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[1
-
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./report.toc)
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./repo
+rt.toc)
 \tf@toc=\write6
 \openout6 = `report.toc'.
 
- [2]
-<2012-data-vis-map.png, id=133, 377.2494pt x 234.6366pt>
+
+[2]
+<2012-data-vis-map.png, id=128, 377.2494pt x 234.6366pt>
 File: 2012-data-vis-map.png Graphic file (type png)
 <use 2012-data-vis-map.png>
-Package pdftex.def Info: 2012-data-vis-map.png  used on input line 123.
+Package pdftex.def Info: 2012-data-vis-map.png  used on input line 127.
 (pdftex.def)             Requested size: 266.0125pt x 165.46178pt.
 \openout4 = `report.ent'.
 
  [3 <./2012-data-vis-map.png>]
-<squared-loss.png, id=149, 604.2575pt x 476.78125pt>
+<squared-loss.png, id=137, 604.2575pt x 476.78125pt>
 File: squared-loss.png Graphic file (type png)
 <use squared-loss.png>
-Package pdftex.def Info: squared-loss.png  used on input line 165.
+Package pdftex.def Info: squared-loss.png  used on input line 152.
 (pdftex.def)             Requested size: 266.0125pt x 209.89351pt.
  [4 <./squared-loss.png>]
-<../Figures/k_nn_cv_err.jpg, id=156, 1124.2pt x 843.15pt>
-File: ../Figures/k_nn_cv_err.jpg Graphic file (type jpg)
-<use ../Figures/k_nn_cv_err.jpg>
-Package pdftex.def Info: ../Figures/k_nn_cv_err.jpg  used on input line 175.
-(pdftex.def)             Requested size: 266.0125pt x 199.50401pt.
-<../Figures/k_nn_err_cv_minkowski.jpg, id=157, 1214.5375pt x 929.4725pt>
+<../Figures/k_nn_err_cv_minkowski.jpg, id=150, 1214.5375pt x 929.4725pt>
 File: ../Figures/k_nn_err_cv_minkowski.jpg Graphic file (type jpg)
 <use ../Figures/k_nn_err_cv_minkowski.jpg>
 Package pdftex.def Info: ../Figures/k_nn_err_cv_minkowski.jpg  used on input li
-ne 183.
+ne 177.
 (pdftex.def)             Requested size: 266.0125pt x 203.57689pt.
-<lin_reg.png, id=158, 267.8808pt x 223.5552pt>
-File: lin_reg.png Graphic file (type png)
-<use lin_reg.png>
-Package pdftex.def Info: lin_reg.png  used on input line 192.
-(pdftex.def)             Requested size: 266.0125pt x 221.99915pt.
-
-[5 <../Figures/k_nn_cv_err.jpg> <../Figures/k_nn_err_cv_minkowski.jpg>]
-<neur-net.png, id=166, 285.7074pt x 224.5188pt>
+<neur-net.png, id=151, 285.7074pt x 224.5188pt>
 File: neur-net.png Graphic file (type png)
 <use neur-net.png>
-Package pdftex.def Info: neur-net.png  used on input line 197.
+Package pdftex.def Info: neur-net.png  used on input line 189.
 (pdftex.def)             Requested size: 266.0125pt x 209.05382pt.
+<lin_reg.png, id=152, 267.8808pt x 223.5552pt>
+File: lin_reg.png Graphic file (type png)
+<use lin_reg.png>
+Package pdftex.def Info: lin_reg.png  used on input line 196.
+(pdftex.def)             Requested size: 266.0125pt x 221.99915pt.
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
+ has been already used, duplicate ignored
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--198
-[]\OT1/cmr/m/n/10 When we ran neu-ral net with 1 hid-den layer,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 196--198
-\OT1/cmr/m/n/10 we saw that our model only got bet-ter as the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 196--198
-\OT1/cmr/m/n/10 model's com-plex-ity in-creased, fur-ther show-ing that
- []
-
-
-Underfull \hbox (badness 5345) in paragraph at lines 196--198
-\OT1/cmr/m/n/10 our model was es-sen-tially grossly over-fit-ting to the
- []
-
-<geo-bee.jpg, id=167, 513.92pt x 416.55624pt>
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.198 \subsection{Overall Results}
+                                   <../Figures/k_nn_err_cv_minkowski.jpg> <./ne
+ur-net.png>]
+<geo-bee.jpg, id=160, 513.92pt x 416.55624pt>
 File: geo-bee.jpg Graphic file (type jpg)
 <use geo-bee.jpg>
-Package pdftex.def Info: geo-bee.jpg  used on input line 199.
+Package pdftex.def Info: geo-bee.jpg  used on input line 202.
 (pdftex.def)             Requested size: 266.0125pt x 215.61893pt.
-[6 <./lin_reg.png> <./neur-net.png> <./geo-bee.jpg>] [7] (./report.ent)
-[8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 285.
- [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 285.
+ [6 <./lin_reg.png> <./geo-bee.jpg>] [7] (./report.ent) [8pdfTeX warning (ext4)
+: destination with the same identifier (name{table.1}) has been already used, d
+uplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.307 \end{document}
+                    ]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 307.
+ [9pdfTeX warning (ext4): destination with the same identifier (name{table.2}) 
+has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.307 \end{document}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{table.3}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.307 \end{document}
+                    ]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 307.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 285.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 285.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 307.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 307.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 119DC0E50EEB10F51EF90A6FED318262;1325.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 285.
+(rerunfilecheck)             Checksum: C86CB24401D3E3E028A8BA7C84C784EF;1265.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 307.
  ) 
 Here is how much of TeX's memory you used:
- 17770 strings out of 492649
- 324307 string characters out of 6129622
- 412822 words of memory out of 5000000
- 21293 multiletter control sequences out of 15000+600000
- 12729 words of font info for 48 fonts, out of 8000000 for 9000
+ 18034 strings out of 492649
+ 327578 string characters out of 6129622
+ 515162 words of memory out of 5000000
+ 21541 multiletter control sequences out of 15000+600000
+ 14582 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,54p,1129b,560s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,54p,1129b,552s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
 /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
 usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/
-texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
-live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texl
-ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texliv
-e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/
-2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (9 pages, 699318 bytes).
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/
+local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local
+/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
+xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
+2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/201
+8/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2018
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2018/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on report.pdf (9 pages, 695089 bytes).
 PDF statistics:
- 245 PDF objects out of 1000 (max. 8388607)
- 206 compressed objects within 3 object streams
+ 253 PDF objects out of 1000 (max. 8388607)
+ 211 compressed objects within 3 object streams
  35 named destinations out of 1000 (max. 500000)
- 224 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 211 words of extra memory for PDF output out of 10000 (max. 10000000)
 

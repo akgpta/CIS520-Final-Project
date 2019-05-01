@@ -58,15 +58,14 @@ end
 
 figure
 plot(k_values, err_nn(1, :),'-')
-%hold on; 
-%plot(k_values, err_nn(2, :),'-')
-%hold on;
-%plot(k_values, err_nn(3, :),'-')
+hold on; 
+plot(k_values, err_nn(2, :),'-')
+hold on;
+plot(k_values, err_nn(3, :),'-')
 title('k-Nearest Neighbors')
 xlabel('Value of k') 
 ylabel('Square Error') 
-%legend({'Cross Validation Error', 'Training Error','Test Error'})
-legend({'Cross Validation Error'})
+legend({'Cross Validation Error', 'Training Error','Test Error'})
 
 figure
 plot(q_values, min(err_cv_min),'-')
