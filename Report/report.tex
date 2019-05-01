@@ -19,6 +19,7 @@
 \usepackage{lipsum}
 \usepackage{float}
 \usepackage{capt-of}
+\usepackage{setspace}
 \hypersetup{colorlinks=true,urlcolor=blue}
 
 \renewcommand{\baselinestretch}{1.3}
@@ -172,9 +173,11 @@ To take this a step further, we also built a nearest neighbor model using Minkow
 We cross-validated across the following values of $q = [1, 2, 3, 4, 5]$ and for each of these $q$ values, found the best $k$ value. Interestingly, we found for each value of $q$, $k = 1$ produced the minimum squared error. Moreover, the same phenomenon of small errors for $k$ values from one to three and relatively larger errors for every subsequent value of $k$ was observed for all values of $q$. Overall, $k = 1$ and $q = 2$ (which is equivalent to Euclidean distance) produced the best model.
 
 \begingroup
-    \centering
+    %\centering
     \includegraphics[width=\columnwidth]{../Figures/k_nn_err_cv_minkowski.jpg}
-    \captionof{figure}{Cross Validation Error for k-Nearest Neighbors Using Minkowski Distance.} {\small Note that $q=2$ refers to a model built off of a Euclidean distance formula.} \label{fig:a}
+    \begin{spacing}{1.2}\label{fig:a}
+    \captionof{figure}{Cross Validation Error for k-Nearest Neighbors Using Minkowski Distance. \\{\small Note that $q=2$ refers to a model built off of a Euclidean distance formula.}} 
+	\end{spacing}
 \endgroup
 
 %\includegraphics[width=\columnwidth]{../Figures/k_nn_err_cv_minkowski.jpg}
@@ -199,7 +202,7 @@ As most related papers ran linear regression, we also ran regularized and unregu
 
 \TODO not a complete sentence Ended up with memorizers on neural net and nearest neighbors.
 
-\includegraphics[width=\columnwidth]{geo-bee.jpg}
+%\includegraphics[width=\columnwidth]{geo-bee.jpg}
 The best predictor of suicide rates is the country label itself. Suicide rates in Ghana in 2013 are going to look like suicide rates in Ghana in 2012 most. Modeling this regression outcome as independent draws disregards the time series data and correlation of examples. As such, nearest neighbors performs exceptionally well, since it just recognized the country through these 8 input features. 
 
 \section{Discussion and Reflections}
