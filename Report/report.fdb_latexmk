@@ -1,6 +1,12 @@
 # Fdb version 3
+<<<<<<< HEAD
 ["pdflatex"] 1556673509 "report.tex" "report.pdf" "report" 1556673510
   "../Figures/k_nn_err_cv_minkowski.jpg" 1556666025 57726 2773b890642190363d16f5fd438258d8 ""
+=======
+["pdflatex"] 1556673416 "report.tex" "report.pdf" "report" 1556673417
+  "../Figures/k_nn_cv_err.jpg" 1556666174 36988 e9d2e5a2cdc12410ed14448467d5e862 ""
+  "../Figures/k_nn_err_cv_minkowski.jpg" 1556666174 57726 2773b890642190363d16f5fd438258d8 ""
+>>>>>>> 2a8cb4be10fd9a090367a74addadb5afd4b325ff
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1480098696 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
@@ -51,6 +57,7 @@
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1480098733 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb" 1480098733 35660 fb24af7afbadb71801619f1415838111 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1480098733 31099 c85edf1dd5b9e826d67c9c7293b6786c ""
+  "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1480098734 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1480098806 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1480098815 1458 43ab4710dc82f3edeabecd0d099626b2 ""
   "/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty" 1480098815 8237 3b62ef1f7e2c23a328c814b3893bc11f ""
@@ -169,6 +176,7 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
+<<<<<<< HEAD
   "2012-data-vis-map.png" 1556505490 233803 a39bcc816d50aaa7c3f9d9830ef032af ""
   "geo-bee.jpg" 1556505490 41949 6c247ab8cb9226c8825f8559c1477819 ""
   "lin_reg.png" 1556645581 67917 73a18ed910c29e0fb91c9475782b17af ""
@@ -186,3 +194,28 @@
   "report.ent"
   "report.aux"
   "report.log"
+=======
+  "2012-data-vis-map.png" 1556487007 233803 a39bcc816d50aaa7c3f9d9830ef032af ""
+  "geo-bee.jpg" 1556487140 41949 6c247ab8cb9226c8825f8559c1477819 ""
+  "lin_reg.png" 1556666174 67917 73a18ed910c29e0fb91c9475782b17af ""
+  "neur-net.png" 1556642720 57845 e57363c8dc4c81383cd1af3fb4c7f775 ""
+  "report.aux" 1556673417 3358 d6debdc8aa90fb06fa4a9fd174b44de3 ""
+  "report.ent" 1556673417 1058 39938b4cfbfad114f39860e7cd3baff0 ""
+  "report.out" 1556673417 1265 c86cb24401d3e3e028a8ba7c84c784ef ""
+  "report.tex" 1556673415 22125 761275116b19a31834fe165aa4b5c74f ""
+  "report.toc" 1556673417 1625 7cf15375e577354a44cc6e69598a1aa5 ""
+  "squared-loss.png" 1556641464 97733 dfaf3316f759427f43f895a3352f90f1 ""
+  (generated)
+  "neur-net.png"
+  "report.log"
+  "report.tex"
+  "lin_reg.png"
+  "report.pdf"
+  "report.toc"
+  "2012-data-vis-map.png"
+  "report.aux"
+  "report.ent"
+  "report.out"
+  "geo-bee.jpg"
+  "squared-loss.png"
+>>>>>>> 2a8cb4be10fd9a090367a74addadb5afd4b325ff
