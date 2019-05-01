@@ -171,8 +171,6 @@ Moreover, most papers perform a time series analysis. We provide a different app
 
 \subsection{k Nearest-Neighbors} We first implemented a $k$-nearest neighbor algorithm using Euclidean distance as we suspected suicide rates between similar countries would be comparable. We cross validated across the following values of $k = [1,2, 3, 4, 5, 6, 7, 8, 9, 10]$ and found that $k = 1$ produced the best model with a cross validation squared error of $4.697 * 10^4$, training error of $8.160 * 10^6$ and test error of $1.720 * 10^6$. Although this error appears to be high, we remind the reader that this squared error is taken over $78$ test data points per fold and each of the suicide rate values can be as large as $10000$. In fact, if you average this cross validation error over these points and square root you get an average error of $\sqrt{\frac{4.697 * 10^4}{78}} \approx 24.5 $ on each sample. 
 
-Figure \ref{fig:minkowski_fig} shows the results when cross-validating over different $k$ values. Here we have omitted the training and test error to highlight an interesting trend in cross-validation error. Recall that our each of our folds have data of from each country of $3$ years. Say we are looking for the nearest neighbors for country $x$. We suspect that the error is very low for $k$ values of $1, 2, 3$ because the model is utilizing the country $x$'s $3$ data points from different years to predict suicide rates for the test year. Errors then pick up for values of $k$ greater than $3$ because the model is forced to use the data from countries other than country $x$, which may not be as informative when making decision about suicide rates for country $x$. 
-{}
 %\begingroup
     %{\centering
     %\includegraphics[width=\columnwidth]{../Figures/k_nn_cv_err.jpg}
@@ -215,11 +213,6 @@ We found that a learning rate of 0.001 and 5000 iterations was more than enough 
     \end{spacing}
 \endgroup
 
-
-\subsection{Linear Regression} 
-We thought regularization might help with overfitting, but we quickly saw that this was not the case. The data doesn't seem well suited to a linear model. This likely stems from the fact that the suicide rates are not particularly correlated with our input features. Additional detail is omitted here for the sake of parsimony. 
-
-
 \begingroup
     %\centering
     \includegraphics[width=\columnwidth]{lin_reg.png}
@@ -227,9 +220,9 @@ We thought regularization might help with overfitting, but we quickly saw that t
     \captionof{figure}{Linear Regression Model}\label{fig:lin_reg_model} 
     \end{spacing}
 \endgroup
-\end{multicols}
-\pagebreak
-\begin{multicols}{2}
+
+\subsection{Linear Regression} 
+We thought regularization might help with overfitting, but we quickly saw that this was not the case. The data doesn't seem well suited to a linear model. This likely stems from the fact that the suicide rates are not particularly correlated with our input features. Additional detail is omitted here for the sake of parsimony. 
 
 \subsection{Overall Results}
 
