@@ -214,13 +214,7 @@ We found that a learning rate of $0.001$ and $5000$ iterations was more than eno
     \end{spacing}
 \endgroup
 
-\subsection{Linear Regression} As our previous models grossly over fit the data, we thought implementing a regularized linear regression may provide us more insight on how to deal with the data. We found that $\lambda = 10^{-2}$ worked the best and gave a cross validation error of $3.607 * 10^5$, training error of $1.431* 10^6$, and test error of $2.524 * 10^5$. The low $\lambda$ value and incredibly high errors suggests that the data did not respond well to regularization. 
-
-
-
-
-However, we quickly realized that this was not the case. In fact, the data doesn't seem well suited to a linear model. This likely stems from the fact that the suicide rates are not particularly correlated with our input features. 
-
+\subsection{Linear Regression} As our previous models grossly over fit the data, we thought implementing a regularized linear regression may provide us more insight on how to deal with the data. However, we quickly realized that this was not the case.
 \begingroup
     %\centering
     \includegraphics[width=\columnwidth]{lin_reg.png}
@@ -228,6 +222,9 @@ However, we quickly realized that this was not the case. In fact, the data doesn
     \captionof{figure}{Linear Regression Model}\label{fig:lin_reg_model} 
     \end{spacing}
 \endgroup
+
+We found that $\lambda = 10^{-2}$ worked the best and gave a cross validation error of $3.607 * 10^5$, training error of $1.431* 10^6$, and test error of $2.524 * 10^5$. The low $\lambda$ value and incredibly high errors suggests that the data did not respond well to regularization. In fact, the data doesn't seem well suited to a linear model. This likely stems from the fact that the suicide rates are not particularly correlated with our input features. 
+
 
 
 \subsection{Overall Results}
