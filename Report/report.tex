@@ -186,9 +186,11 @@ From these results, we began to suspect that nearest neighbors may just be memor
 
 From these results, we began to suspect that nearest neighbors may just be memorizing the suicide history of countries. Indeed when we looked further into the data, we realized that the countries are very distinct, causing the countries to be most similar to themselves.
 
-\subsection{Neural Network} \TODO(Aashish) Ran neural net on $1$ hidden network...
+\subsection{Neural Network} We ran a neural network model with one hidden layer and a single output neuron to try to accurately classify suicide rates. To accurately determine the number of hidden nodes, we cross validated over the number of nodes: \{1, 5, 10, 15, 25, 50, 100\}. 
 
-When we ran neural net with 1 hidden layer, we saw that our model only got better as the model’s complexity increased, further showing that our model was essentially grossly overfitting to the train data and essentially functioning as a memorizer.
+However, we saw that the more nodes we added, the better our train, test, and CV error would become. This furthers the hypothesis that a complex model works better only because it overfits the data and functions as a memorizer. 
+
+We found that a learning rate of 0.001 and 5000 iterations was more than enough to fit the training data. Increasing the learning rate and iterations further only resulted in arithmetic underflow. 
 
 \includegraphics[width=\columnwidth]{neur-net.png}
 
