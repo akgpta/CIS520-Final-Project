@@ -1,9 +1,13 @@
 # Fdb version 3
 <<<<<<< HEAD
+<<<<<<< HEAD
 ["pdflatex"] 1556682119 "report.tex" "report.pdf" "report" 1556682120
   "../Figures/k_nn_err_cv_minkowski.jpg" 1556666025 57726 2773b890642190363d16f5fd438258d8 ""
 =======
 ["pdflatex"] 1556681772 "report.tex" "report.pdf" "report" 1556681773
+=======
+["pdflatex"] 1556682249 "report.tex" "report.pdf" "report" 1556682250
+>>>>>>> f2a678c8f85aff34580588b651733ae8fe141d79
   "../Figures/k_nn_err_cv_minkowski.jpg" 1556666174 57726 2773b890642190363d16f5fd438258d8 ""
 >>>>>>> 1a8c732d39343619b1f4abe3519ab266adc7e805
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -204,23 +208,29 @@
   "2012-data-vis-map.png" 1556487007 233803 a39bcc816d50aaa7c3f9d9830ef032af ""
   "lin_reg.png" 1556666174 67917 73a18ed910c29e0fb91c9475782b17af ""
   "neur-net.png" 1556642720 57845 e57363c8dc4c81383cd1af3fb4c7f775 ""
-  "report.aux" 1556681773 5025 2fb6cf3f98bd53379047e7ba4101fda9 ""
-  "report.ent" 1556681773 1058 39938b4cfbfad114f39860e7cd3baff0 ""
-  "report.out" 1556681773 1265 c86cb24401d3e3e028a8ba7c84c784ef ""
-  "report.tex" 1556681770 24750 ec26381e7e7c832d858a56edc66819b3 ""
-  "report.toc" 1556681773 1625 0808e0e682dc4e3edfbb5de05da56d4e ""
+  "report.aux" 1556682250 5112 a359fdb892b92ba98dfa36aa1a9c79b9 ""
+  "report.ent" 1556682250 1181 faf88f7675fe2cb74885ce7277730167 ""
+  "report.out" 1556682250 1312 3954e1dd10e9b6cb5cd14a04780598ed ""
+  "report.tex" 1556682247 25178 a7e39d3f97ed90a8ec49f78ac6e8d0fa ""
+  "report.toc" 1556682250 1692 4d726661c6bb00801d1a3300e1fda351 ""
   "squared-loss.png" 1556641464 97733 dfaf3316f759427f43f895a3352f90f1 ""
   (generated)
-  "report.tex"
-  "report.toc"
-  "squared-loss.png"
-  "lin_reg.png"
+  "geo-bee.jpg"
   "report.out"
+  "report.aux"
+  "squared-loss.png"
+  "report.log"
   "2012-data-vis-map.png"
-  "neur-net.png"
   "report.ent"
+  "report.toc"
+  "report.tex"
+  "lin_reg.png"
   "report.pdf"
+<<<<<<< HEAD
   "geo-bee.jpg"
   "report.log"
   "report.aux"
 >>>>>>> 1a8c732d39343619b1f4abe3519ab266adc7e805
+=======
+  "neur-net.png"
+>>>>>>> f2a678c8f85aff34580588b651733ae8fe141d79
