@@ -157,7 +157,13 @@ Moreover, most papers perform a time series analysis. We provide a different app
 \subsection{Data Processing Needed} Our data came in a variety of comma-separated formats. A lot of countries were labelled in differing manner and years were often a column and other times a point in a row. We used Excel Pivot Tables to make the CSVs easier to parse and standardized. Later, we used Pandas and Python to remove blanks and resolve issues with inconsistencies to finish with an aggregated set of data. Other pre-processing included filling in missing values, reconciling some country names such as (Trinidad \& Tobago vs. Trinidad and Tobago), and dropping some values if a country was not universally present across all datasets. Our final product was a single CSV with 78 rows (countries) with columns for each of the 8 features. The relatively small number of countries is a testament to the variance in countries in each dataset as well as the missing values.
 \subsection{Inputs, Outputs} Inputs are a variety of real-valued data points tied to the country. They are described above. Most are also measured for a specific year, however some are just duplicated across all years (e.g. Alcohol Consumption). Such data points were treated as constant for a country through time. Outputs are a model, which given a countries characteristic features, can predict suicide rates. Note that the prediction is the number of suicides per 100,000 people for any given country. Thus, our problem becomes a regression problem from $\mathbb{R}^8 \rightarrow \mathbb{R}$.
 \subsection{Performance Measures} Given the regression nature of this problem, we used a squared loss model to measure performance. This is because with positive real valued data with explicit bounds of $[0, 10^5]$, but more reasonable empirical bounds of around $[0, 10^3]$. The following image is a representation of squared loss, but in a one dimensional feature space. \endnote{https://blog.algorithmia.com/introduction-to-loss-functions/.}
-\includegraphics[width=\columnwidth]{squared-loss.png}
+\begingroup
+    %\centering
+    \includegraphics[width=\columnwidth]{squared-loss.png}
+    \begin{spacing}{1.2}
+    \captionof{figure}{Squared Loss Model}\label{fig:squared_model} 
+    \end{spacing}
+\endgroup
 
 
 \section{Methods and Results}
@@ -167,7 +173,7 @@ Moreover, most papers perform a time series analysis. We provide a different app
 
 \subsection{k Nearest-Neighbors} We first implemented a $k$-nearest neighbor algorithm using Euclidean distance as we suspected suicide rates between similar countries would be comparable. We cross validated across the following values of $k = [1,2, 3, 4, 5, 6, 7, 8, 9, 10]$ and found that $k = 1$ produced the best model with a cross validation squared error of $4.697 * 10^4$, training error of $8.160 * 10^6$ and test error of $1.720 * 10^6$. Although this error appears to be high, we remind the reader that this squared error is taken over $78$ test data points per fold and each of the suicide rate values can be as large as $10000$. In fact, if you average this cross validation error over these points and square root you get an average error of $\sqrt{\frac{4.697 * 10^4}{78}} \approx 24.5 $ on each sample. 
 
-Figure \ref{fig:a} below shows the results when cross-validating over different $k$ values. Here we have omitted the training and test error to highlight an interesting trend in cross-validation error. Recall that our each of our folds have data of from each country of $3$ years. Say we are looking for the nearest neighbors for country $x$. We suspect that the error is very low for $k$ values of $1, 2, 3$ because the model is utilizing the country $x$'s $3$ data points from different years to predict suicide rates for the test year. Errors then pick up for values of $k$ greater than $3$ because the model is forced to use the data from countries other than country $x$, which may not be as informative when making decision about suicide rates for country $x$. 
+Figure \ref{fig:minkowski_fig} below shows the results when cross-validating over different $k$ values. Here we have omitted the training and test error to highlight an interesting trend in cross-validation error. Recall that our each of our folds have data of from each country of $3$ years. Say we are looking for the nearest neighbors for country $x$. We suspect that the error is very low for $k$ values of $1, 2, 3$ because the model is utilizing the country $x$'s $3$ data points from different years to predict suicide rates for the test year. Errors then pick up for values of $k$ greater than $3$ because the model is forced to use the data from countries other than country $x$, which may not be as informative when making decision about suicide rates for country $x$. 
 {}
 %\begingroup
     %{\centering
@@ -202,13 +208,27 @@ However, we saw that the more nodes we added, the better our train, test, and CV
 
 We found that a learning rate of 0.001 and 5000 iterations was more than enough to fit the training data. Increasing the learning rate and iterations further only resulted in arithmetic underflow. 
 
-\includegraphics[width=\columnwidth]{neur-net.png}
 
-\subsection{Linear Regression} First, we implemented a linear regression as our base line model. As most related papers ran linear regression, we also ran regularized and unregularized least squares linear regression to use as a baseline. Additional detail is omitted here for the sake of parsimony. 
+\begingroup
+    %\centering
+    \includegraphics[width=\columnwidth]{neur-net.png}
+    \begin{spacing}{1.2}
+    \captionof{figure}{Neural Net}\label{fig:neural_net_fig} 
+    \end{spacing}
+\endgroup
 
-\begin{center}
-\includegraphics[width=\columnwidth]{lin_reg.png}
-\end{center}
+
+\subsection{Linear Regression} 
+As most related papers ran linear regression, we also ran regularized and unregularized least squares linear regression. We thought regularization might help with overfitting, but we quickly saw that this was not the case. The data doesn't seem well suited to a linear model. This likely stems from the fact that the suicide rates are not particularly correlated with our input features. Additional detail is omitted here for the sake of parsimony. 
+
+
+\begingroup
+    %\centering
+    \includegraphics[width=\columnwidth]{lin_reg.png}
+    \begin{spacing}{1.2}
+    \captionof{figure}{Linear Regression Model}\label{fig:lin_reg_model} 
+    \end{spacing}
+\endgroup
 
 \subsection{Overall Results}
 
