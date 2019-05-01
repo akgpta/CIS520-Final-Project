@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  30 APR 2019 19:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  30 APR 2019 20:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -815,69 +815,69 @@ Package Fancyhdr Warning: \headheight is too small (0.0pt):
 \openout6 = `report.toc'.
 
  [2]
-<2012-data-vis-map.png, id=133, 377.2494pt x 234.6366pt>
+<2012-data-vis-map.png, id=128, 377.2494pt x 234.6366pt>
 File: 2012-data-vis-map.png Graphic file (type png)
 <use 2012-data-vis-map.png>
-Package pdftex.def Info: 2012-data-vis-map.png  used on input line 123.
+Package pdftex.def Info: 2012-data-vis-map.png  used on input line 122.
 (pdftex.def)             Requested size: 266.0125pt x 165.46178pt.
 \openout4 = `report.ent'.
 
  [3 <./2012-data-vis-map.png>]
-<squared-loss.png, id=149, 604.2575pt x 476.78125pt>
+<squared-loss.png, id=137, 604.2575pt x 476.78125pt>
 File: squared-loss.png Graphic file (type png)
 <use squared-loss.png>
-Package pdftex.def Info: squared-loss.png  used on input line 165.
+Package pdftex.def Info: squared-loss.png  used on input line 147.
 (pdftex.def)             Requested size: 266.0125pt x 209.89351pt.
  [4 <./squared-loss.png>]
-<../Figures/k_nn_cv_err.jpg, id=156, 1124.2pt x 843.15pt>
+<../Figures/k_nn_cv_err.jpg, id=148, 1124.2pt x 843.15pt>
 File: ../Figures/k_nn_cv_err.jpg Graphic file (type jpg)
 <use ../Figures/k_nn_cv_err.jpg>
-Package pdftex.def Info: ../Figures/k_nn_cv_err.jpg  used on input line 175.
+Package pdftex.def Info: ../Figures/k_nn_cv_err.jpg  used on input line 157.
 (pdftex.def)             Requested size: 266.0125pt x 199.50401pt.
-<../Figures/k_nn_err_cv_minkowski.jpg, id=157, 1214.5375pt x 929.4725pt>
+<../Figures/k_nn_err_cv_minkowski.jpg, id=149, 1214.5375pt x 929.4725pt>
 File: ../Figures/k_nn_err_cv_minkowski.jpg Graphic file (type jpg)
 <use ../Figures/k_nn_err_cv_minkowski.jpg>
 Package pdftex.def Info: ../Figures/k_nn_err_cv_minkowski.jpg  used on input li
-ne 183.
+ne 165.
 (pdftex.def)             Requested size: 266.0125pt x 203.57689pt.
-<neur-net.png, id=158, 285.7074pt x 224.5188pt>
+<neur-net.png, id=150, 285.7074pt x 224.5188pt>
 File: neur-net.png Graphic file (type png)
 <use neur-net.png>
-Package pdftex.def Info: neur-net.png  used on input line 191.
+Package pdftex.def Info: neur-net.png  used on input line 173.
 (pdftex.def)             Requested size: 266.0125pt x 209.05382pt.
 
-[5 <../Figures/k_nn_cv_err.jpg> <../Figures/k_nn_err_cv_minkowski.jpg>]
-<lin_reg.png, id=168, 267.8808pt x 223.5552pt>
+[5 <../Figures/k_nn_cv_err.jpg> <../Figures/k_nn_err_cv_minkowski.jpg> <./neur-
+net.png>]
+<lin_reg.png, id=156, 267.8808pt x 223.5552pt>
 File: lin_reg.png Graphic file (type png)
 <use lin_reg.png>
-Package pdftex.def Info: lin_reg.png  used on input line 198.
+Package pdftex.def Info: lin_reg.png  used on input line 180.
 (pdftex.def)             Requested size: 266.0125pt x 221.99915pt.
-<geo-bee.jpg, id=169, 513.92pt x 416.55624pt>
+<geo-bee.jpg, id=157, 513.92pt x 416.55624pt>
 File: geo-bee.jpg Graphic file (type jpg)
 <use geo-bee.jpg>
-Package pdftex.def Info: geo-bee.jpg  used on input line 204.
+Package pdftex.def Info: geo-bee.jpg  used on input line 186.
 (pdftex.def)             Requested size: 266.0125pt x 215.61893pt.
-
-[6 <./neur-net.png> <./lin_reg.png> <./geo-bee.jpg>] [7] (./report.ent)
-[8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 290.
+ [6 <./lin_reg.png> <./geo-bee.jpg>] [7] (./report.ent) [8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 291.
  [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 290.
- (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 290.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 290.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 291.
+
+(./report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 291.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 291.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 4D5892F892BCC7EBB74E2042614F99A2;1333.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 290.
+(rerunfilecheck)             Checksum: C86CB24401D3E3E028A8BA7C84C784EF;1265.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 291.
  ) 
 Here is how much of TeX's memory you used:
- 17770 strings out of 492649
- 324307 string characters out of 6129622
- 412822 words of memory out of 5000000
- 21293 multiletter control sequences out of 15000+600000
+ 17768 strings out of 492649
+ 324277 string characters out of 6129622
+ 412805 words of memory out of 5000000
+ 21292 multiletter control sequences out of 15000+600000
  12729 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,54p,1129b,560s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,54p,1129b,548s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -894,10 +894,10 @@ e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive
 18/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/201
 8/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2018/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (9 pages, 714974 bytes).
+Output written on report.pdf (9 pages, 713333 bytes).
 PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
- 212 compressed objects within 3 object streams
- 35 named destinations out of 1000 (max. 500000)
- 224 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 244 PDF objects out of 1000 (max. 8388607)
+ 203 compressed objects within 3 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 216 words of extra memory for PDF output out of 10000 (max. 10000000)
 

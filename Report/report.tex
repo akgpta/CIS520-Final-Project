@@ -55,7 +55,7 @@
 \vspace{12pt}
 
 %Fill in your project title
-\textbf{\Large{Project Title}}
+\textbf{\Large{Modeling Suicide Rates at the Country Level}}
 
 \vspace{1cm}
 
@@ -88,16 +88,12 @@ Jane Lee
 Team Member & Contributions \\
 \hline
 Monal Garg & Past Work, Solution Approach, Machine Learning Algorithms, Visualizations, Report \\
-  & (continue if needed) \\
 \hline
 Amit Gupta & Problem Formulation, Algorithms Plan for Use, Machine Learning Algorithms, Visualizations, Report \\
-  & (continue if needed) \\
 \hline
 Aashish Jain & Data Cleaning, Data Stitching, Machine Learning Algorithms, Visualizations, Report \\
-  & (continue if needed) \\
 \hline
 Moksh Jawa & Data Cleaning, Data Stitching, Machine Learning Algorithms, Visualizations, Report \\
-  & (continue if needed) \\
 \hline
 \end{tabular}
 \end{center}
@@ -111,7 +107,10 @@ Moksh Jawa & Data Cleaning, Data Stitching, Machine Learning Algorithms, Visuali
 
 
 \newpage
+{
+\hypersetup{linkcolor=blue}
 \tableofcontents
+}
 \newpage
 
 \section{Abstract}
@@ -119,35 +118,18 @@ Suicide is a major public health concern worldwide. Because living in a differen
 
 \begin{multicols}{2}
 \section{Introduction}
-\subsection{Problem Motivation} Unfortunately, it is a sad reality that many individuals each year commit suicide. We in the U.S. are slowly being aware of this issue, but we wanted to understand suicide rates internationally. Especially, we wanted to look at these rates as they related to common features of each country, such as GDP, unemployment, and alcohol consumption. At a high-level we wanted to draw out any meaningful relationship between these macro features and suicide rates.
+\subsection{Problem Motivation} Unfortunately, it is a sad reality that many individuals each year commit suicide. We in the U.S. are slowly becoming aware of this issue, but we wanted to understand suicide rates internationally. Particularly, we wanted to look at these rates as they related to common features of each country, such as GDP, unemployment, and alcohol consumption. At a high-level, we wanted to draw out any meaningful relationship between these macro features and suicide rates.
 \includegraphics[width=\columnwidth]{2012-data-vis-map.png}
 \subsection{Data Set and Source} Our project grew from an intriguing 
-World Health Organization data set will well over 35 years of suicide rates by country broken up by demographics.  \endnote{https://www.kaggle.com/szamil/who-suicide-statistics}. In an effort to extend existing analyses though, we actually sources global data from a variety of sources. This included a FiveThirtyEight data set on alcohol consumptixon \endnote{https://www.kaggle.com/fivethirtyeight/fivethirtyeight-alcohol-consumption-dataset}. We also incorporated a World Bank Data Set on Youth Unemployment \endnote{https://www.kaggle.com/sovannt/world-bank-youth-unemployment} and another from the World Bank on population, fertility, and life expectancy \endnote{https://www.kaggle.com/gemartin/world-bank-data-1960-to-2016}. A lot of the work done was with respect to time series and things like that. What we wanted to do, though, was take a look at combining data from multiple sources. 
+World Health Organization data set with well over 35 years of suicide rates by country broken up by demographics \endnote{https://www.kaggle.com/szamil/who-suicide-statistics}. In an effort to extend existing analyses, we sourced global data from a variety of sources, including a FiveThirtyEight data set on alcohol consumption \endnote{https://www.kaggle.com/fivethirtyeight/fivethirtyeight-alcohol-consumption-dataset}, a World Bank Data Set on Youth Unemployment \endnote{https://www.kaggle.com/sovannt/world-bank-youth-unemployment}, and another from the World Bank on population, fertility, and life expectancy \endnote{https://www.kaggle.com/gemartin/world-bank-data-1960-to-2016}. A lot of the work done was with respect to time series and things like that. What we wanted to do, though, was take a look at combining data from multiple sources. 
 Our project team sought to understand a little bit more about the intricacies of sourcing data from multiple places. This proved to be a difficult challenge.  
-\subsection{Summary Statistics} 
-We've provided summary statistics for 4 of the datasets we will be using in our project shown in Tables \hyperref[summary-statistic-table-alcohol]{0}, \ref{summary-statistic-table-youth-unemployment}, \ref{summary-statistic-table-fertility}, \ref{summary-statistic-table-life}, some of which are located in the appendix.
-
-\begin{adjustwidth}{8px}{}
-\begin{tabular}{|l|l|}
-\hline
-Statistic          & Average liters/person/year \\ \hline
-Min                & 0                          \\ \hline
-Max                & 14.4                       \\ \hline
-Mean               & 4.71                       \\ \hline
-Median             & 4.2                        \\ \hline
-Standard Deviation & 3.77                       \\ \hline
-\multicolumn{2}{c}{Table 0: Alcohol Consumption by Country} 
-\label{summary-statistic-table-alcohol}
-\end{tabular}
-\end{adjustwidth}
-
 
 \section{Related Work}
 \subsection{Related to Models} 
 
-Among the papers that analzyed economic factors, a regression model seemed to be the popular choice of method. For example, Pandey and Kaur paper used a Auto-Regressive Distributed Lag (ARDL) model \endnote{https://crawford.anu.edu.au/acde/asarc/pdf/papers/2009/WP2009/{\_}08.pdf}. 
+Among the papers that analzyed economic factors, a regression model seemed to be the popular choice. For example, a Pandey and Kaur paper used a Auto-Regressive Distributed Lag (ARDL) model \endnote{https://crawford.anu.edu.au/acde/asarc/pdf/papers/2009/WP2009/{\_}08.pdf}. 
 
-Most of the articles concerning the relationship of suicide rate and alcohol consumption related trends from a biological perspective utilized relatively simple statistical analysis \endnote{https://www.ncbi.nlm.nih.gov/pubmed/9229027}. Whereas medical research that involved more complex forms of data such as fMRI brain scans utilized algorithms such as Gaussian Naive Bayes \endnote{https://nocklab.fas.harvard.edu/files/nocklab/files/just{\_}2017{\_}machlearn{\_}suicide{\_}emotion{\_}youth.pdf}.
+Most articles concerning the relationship betweem suicide rate and alcohol consumption related trends from a biological perspective utilized relatively simple statistical analysis \endnote{https://www.ncbi.nlm.nih.gov/pubmed/9229027}. On the other hand, medical research that involved more complex data such as fMRI brain scans utilized algorithms such as Gaussian Naive Bayes \endnote{https://nocklab.fas.harvard.edu/files/nocklab/files/just{\_}2017{\_}machlearn{\_}suicide{\_}emotion{\_}youth.pdf}.
 
 \subsection{Related to Problem} 
 
@@ -233,7 +215,26 @@ There are a finite number of countries in the world. In fact, there are 195 coun
 
 \section{References} \theendnotes
 
-\section{Appendix} 
+\section{Appendix}
+
+Dataset Summary Statistics:
+
+\begin{adjustwidth}{8px}{}
+\centering
+\begin{tabular}{|l|l|}
+\hline
+Statistic          & Average liters/person/year \\ \hline
+Min                & 0                          \\ \hline
+Max                & 14.4                       \\ \hline
+Mean               & 4.71                       \\ \hline
+Median             & 4.2                        \\ \hline
+Standard Deviation & 3.77                       \\ \hline
+\multicolumn{2}{c}{Table 0: Alcohol Consumption by Country} 
+\label{summary-statistic-table-alcohol}
+\end{tabular}
+\end{adjustwidth}
+
+
 \begin{table}[ht]
 \centering
 \begin{tabular}{|l|l|l|l|l|l|}
